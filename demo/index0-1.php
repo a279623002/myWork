@@ -14,7 +14,7 @@ echo $ip_addr;
 
 
 echo "<br />";
-$city = getCity('59.37.164.179');
+$city = getCity($ip_addr);
 echo "<pre>";
 print_r($city);
 echo "</pre>";

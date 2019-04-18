@@ -161,6 +161,23 @@ $link = connect();
 //     [name] => 小三
 // )
 // $query = "select * from student s RIGHT JOIN teacher t ON t.id = s.tid"; 
+
+// 子链接（将第一次查询的结果，作为一个结果下一次使用）
+$query = "select s.id, s.grade, s.sname, s.tid from student s where s.tid in (select t.id from teacher t where t.status = 2)";
+// Array
+// (
+//     [id] => 2
+//     [grade] => 32.00
+//     [sname] => 啊二
+//     [tid] => 2
+// )
+// Array
+// (
+//     [id] => 4
+//     [grade] => 59.00
+//     [sname] => 啊四
+//     [tid] => 2
+// )
 $result = execute($link, $query);
 
 while($data = mysqli_fetch_assoc($result)) {
