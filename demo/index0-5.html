@@ -119,12 +119,13 @@
                 return false;
             }
             if (!CFG.preview && CFG.isOnline && !CFG.isPCAccessKeyValid && isPc) {
-                // var path = slotIds[CFG.slotId];
+                var path = slotIds[CFG.slotId];
                 // if (path) {
                 //     location.href = rootUrl + path;
                 // } else {
                 //     location.href = '/activity/pcError';
                 // }
+                alert(rootUrl + path);
             }
         })();
 
