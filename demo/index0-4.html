@@ -32,15 +32,9 @@
             };
             if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
                 var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-                var app = navigator.appVersion.toLowerCase();
-                alert(app);
                 if (ua.match(/MicroMessenger/i) == "micromessenger") {
                     //在微信中打开
                     alert('wechat');
-                }
-                if (browser.versions.iqiyi) {
-                    //在爱奇艺客户端打开
-                    alert('Iqiyi');
                 }
                 // if (ua.match(/WeiBo/i) == "weibo") {
                 //     //在新浪微博客户端打开
@@ -55,9 +49,6 @@
                 if (browser.versions.android) {
                     //是否在安卓浏览器打开
                     alert('android');
-                }
-                else {
-                    alert('其他');
                 }
             } else {
                 //否则就是PC浏览器打开
