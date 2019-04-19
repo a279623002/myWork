@@ -24,7 +24,8 @@
                         android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
                         iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
                         iPad: u.indexOf('iPad') > -1, //是否iPad
-                        webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                        webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                        iqiyi: u.indexOf('IqiyiVersion') == -1 //爱奇艺
                     };
                 }(),
                 language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -35,8 +36,8 @@
                     //在微信中打开
                     alert('wechat');
                 }
-                if (ua.match(/Iqiyi/i) == "Iqiyi") {
-                    //在新浪微博客户端打开
+                if (browser.versions.iqiyi) {
+                    //在爱奇艺客户端打开
                     alert('Iqiyi');
                 }
                 // if (ua.match(/WeiBo/i) == "weibo") {
