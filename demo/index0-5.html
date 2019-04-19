@@ -119,12 +119,12 @@
                 return false;
             }
             if (!CFG.preview && CFG.isOnline && !CFG.isPCAccessKeyValid && isPc) {
-                var path = slotIds[CFG.slotId];
-                if (path) {
-                    location.href = rootUrl + path;
-                } else {
-                    location.href = '/activity/pcError';
-                }
+                // var path = slotIds[CFG.slotId];
+                // if (path) {
+                //     location.href = rootUrl + path;
+                // } else {
+                //     location.href = '/activity/pcError';
+                // }
             }
         })();
 
@@ -368,6 +368,4 @@
     </script>
     <script type="text/javascript" src="//yun.tuisnake.com/h5-mami/dist/activity-takeGift-v4-entry.9bf233da6193437092a1.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
-<!-- 结束 -->
