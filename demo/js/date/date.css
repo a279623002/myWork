@@ -1,0 +1,155 @@
+ul,
+li {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: Microsoft YaHei, Arail, sans-serif;
+}
+
+/* #dateshadow {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+} */
+
+#datePage {
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    width: 100%;
+    height: 13rem;;
+    background: #FFFFFF;
+    z-index: 9999;
+}
+
+#datetitle {
+    text-align: center;
+    color: #666666;
+    padding: 20px 10px 12px;
+    line-height: 18px;
+    font-size: 18px;
+}
+
+#datescroll {
+    background: #F8F8F8;
+    margin: 10px 18px;
+    border-radius: 3px;
+    height: 120px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#datescroll div {
+    float: left;
+    margin-top: 15px;
+}
+
+#yearwrapper {
+    position: absolute;
+    margin-left: 16%;
+    left: 0;
+    top: 45px;
+    bottom: 60px;
+    width: 32%;
+}
+
+#monthwrapper {
+    position: absolute;
+    margin-left: 28%;
+    left: 26%;
+    top: 45px;
+    bottom: 60px;
+    width: 32%;
+}
+
+#yearwrapper ul li,
+#monthwrapper ul li {
+    color: #333333;
+    font-size: 14px;
+}
+
+#setcancle ul {
+    text-align: center;
+    line-height: 30px;
+}
+
+#setcancle ul li {
+    border-radius: 3px;
+    float: left;
+    width: 32%;
+    height: 30px;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+#dateconfirm {
+    position: absolute;
+    background: none;
+    right: .5rem;
+    color: #68aced;
+}
+
+#dateconfirm.disabled {
+    background: #dbdddd !important;
+}
+
+#datecancle {
+    position: absolute;
+    background: none;
+    left: .5rem;
+    color: #666666;
+}
+
+#datemark {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 104px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#datescroll_datetime {
+    display: none;
+    background: #F8F8F8;
+    width: 94%;
+    margin: 10px 3%;
+    margin-top: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    height: 120px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#yearwrapper ul,
+#monthwrapper ul {
+    width: 100%;
+}
+
+#dateFooter {
+    width: 100%;
+    background: #fff;
+    height: 44px;
+    bottom: 0px;
+    position: absolute;
+}

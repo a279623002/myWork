@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <style>
+        .row {
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px auto 30px auto;
+        }
+
+        .row .pic-cols {
+            width: 30%;
+        }
+
+        .row .pic-cols img {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .row label {
+            display: inline-block;
+        }
+
+        .row textarea {
+            width: 70%;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" enctype="multipart/form-data">
+        <div class="row">
+            <div class="pic-cols">
+                <table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <img src="./images/demo.png" style="width:100%;" id="pic1" onclick="pic1Upload();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">添加图片</td>
+                    </tr>
+                </table>
+                <input type="file" id="input_upload_pic1" style="display: none" accept="image/jpg, image/png, image/jpeg"
+                    onChange="preview(this,'pic1');">
+            </div>
+            <div class="pic-cols">
+                <table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <img src="./images/demo.png" style="width:100%;" id="pic2" onclick="pic2Upload();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">添加图片</td>
+                    </tr>
+                </table>
+                <input type="file" id="input_upload_pic2" style="display: none" accept="image/jpg, image/png, image/jpeg"
+                    onChange="preview(this,'pic2');">
+            </div>
+            <div class="pic-cols">
+                <table>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <img src="./images/demo.png" style="width:100%;" id="pic3" onclick="pic3Upload();">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">添加图片</td>
+                    </tr>
+                </table>
+                <input type="file" id="input_upload_pic3" style="display: none" accept="image/jpg, image/png, image/jpeg"
+                    onChange="preview(this,'pic3');">
+            </div>
+        </div>
+        <div class="row">
+            <label for="toushu">投诉内容</label>
+            <textarea name="toushu" id="toushu"></textarea>
+        </div>
+        <div class="row">
+            <label for="solve">商家解决</label>
+            <textarea name="solve" id="solve"></textarea>
+        </div>
+        <div class="row">
+            <button>已解决</button>
+            <button>投诉平台</button>
+        </div>
+
+    </form>
+    <script type="text/javascript">
+        /**
+         * 文件上传
+         */
+        function pic1Upload() {
+            $('#input_upload_pic1').click(); // 模拟文件上传按钮点击操作
+        }
+        function pic2Upload() {
+            $('#input_upload_pic2').click(); // 模拟文件上传按钮点击操作
+        }
+        function pic3Upload() {
+            $('#input_upload_pic3').click(); // 模拟文件上传按钮点击操作
+        }
+
+        /**
+         * 缩略图预览
+         * @param file
+         * @param container
+         */
+        var preview = function (file, container) {
+            //缩略图类定义
+            var Picture = function (file, container) {
+                var height = 0,
+                    width = 0,
+                    ext = '',
+                    size = 0,
+                    name = '',
+                    path = '';
+                var self = this;
+                if (file) {
+                    name = file.value;
+                    if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
+                        file.select();
+                        path = document.selection.createRange().text;
+                    } else {
+                        if (file.files) {
+                            // path =  file.files.item(0).getAsDataURL(); // firefox7.0之后该方法弃用了，用下面那个
+                            path = window.URL.createObjectURL(file.files[0]);
+                        } else {
+                            path = file.value;
+                        }
+                    }
+                } else {
+                    throw '无效的文件';
+                }
+                ext = name.substr(name.lastIndexOf("."), name.length);
+                if (container.tagName.toLowerCase() != 'img') {
+                    throw '不是一个有效的图片容器';
+                    container.visibility = 'hidden';
+                }
+                container.src = path;
+                container.alt = name;
+                container.style.visibility = 'visible';
+                height = container.height;
+                width = container.width;
+                size = container.fileSize;
+                this.get = function (name) {
+                    return self[name];
+                };
+                this.isValid = function () {
+                    if (allowExt.indexOf(self.ext) !== -1) {
+                        throw '不允许上传该文件类型';
+                        return false;
+                    }
+                }
+            };
+
+            try {
+                var pic = new Picture(file, document.getElementById('' + container));
+            } catch (e) {
+                alert(e);
+            }
+        };
+    </script>
+</body>
+
+</html>
