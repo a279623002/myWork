@@ -11,3 +11,12 @@
 
 4 index0-3.php
 * php 爬虫（http://www.hydcd.com/cy/fkccy/index.htm）
+
+5 index0-4.html
+* 判断终端类型（为pc、移动。。。）
+
+6 index0-5.php
+* php正则
+
+7 index0-6.html
+* js点击图片上传图片并预览
