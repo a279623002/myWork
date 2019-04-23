@@ -1,4 +1,7 @@
 #文件说明
+
+## demo文件夹
+
 1 inc
 * 为index0-2.php封装的数据库配置（config.inc.php）、mysql方法(mysql.inc.php)
 
@@ -20,3 +23,10 @@
 
 7 index0-6.html
 * js点击图片上传图片并预览
+
+8 index0-7.html
+* 创建文件，修改、获取数据
+
+## weixinDemo
+
+### 修改页面的微信号

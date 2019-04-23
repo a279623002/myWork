@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://activity.hxsh5.top/copyWechat3/index -->
+<html class="screen-desktop-wide device-desktop">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        .zui-icon-success-no-circle:before {
+            content: "\e630"
+        }
+
+        .zui-icon-warn:before {
+            content: "\e6aa"
+        }
+
+        .zui-icon-cancel:before {
+            content: "\e6b4"
+        }
+
+        body {
+            ine-height: 1.6;
+            font-size: 16px
+        }
+
+        .zui-dialog__hd {
+            padding: 1.3em 1.6em .5em
+        }
+
+        .zui-dialog__title {
+            font-weight: 400;
+            font-size: 18px
+        }
+
+        .zui-dialog__bd {
+            padding: 0 1.6em .8em;
+            min-height: 45px;
+            font-size: 14px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            word-break: break-all;
+            color: #999
+        }
+
+        .zui-dialog__bd:first-child {
+            padding: 2.7em 20px 1.7em;
+            color: #353535
+        }
+
+        .zui-dialog__ft {
+            position: relative;
+            line-height: 44px;
+            font-size: 18px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex
+        }
+
+        .zui-dialog__ft:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #D5D5D6;
+            color: #D5D5D6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5)
+        }
+
+        .zui-dialog__btn {
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            color: #3CC51F;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            position: relative
+        }
+
+        .zui-dialog__btn:active {
+            background-color: #EEE
+        }
+
+        .zui-dialog__btn:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            bottom: 0;
+            border-left: 1px solid #D5D5D6;
+            color: #D5D5D6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleX(.5);
+            transform: scaleX(.5)
+        }
+
+        .zui-dialog__btn:first-child:after {
+            display: none
+        }
+
+        .zui-dialog__btn_default {
+            color: #353535
+        }
+
+        .zui-dialog__btn_primary {
+            color: #0BB20C
+        }
+
+        .zui-skin_android .zui-dialog {
+            text-align: left;
+            box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1)
+        }
+
+        .zui-skin_android .zui-dialog__title {
+            color: red;
+            font-size: 21px
+        }
+
+        .zui-skin_android .zui-dialog__hd {
+            text-align: left
+        }
+
+        .zui-skin_android .zui-dialog__bd {
+            color: #999;
+            padding: .25em 1.6em 2em;
+            font-size: 17px;
+            text-align: left
+        }
+
+        .zui-skin_android .zui-dialog__bd:first-child {
+            padding: 1.6em 1.6em 2em;
+            color: #353535
+        }
+
+        .zui-skin_android .zui-dialog__ft {
+            display: block;
+            text-align: right;
+            line-height: 42px;
+            font-size: 16px;
+            padding: 0 1.6em .7em
+        }
+
+        .zui-skin_android .zui-dialog__ft:after {
+            display: none
+        }
+
+        .zui-skin_android .zui-dialog__btn {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 .8em
+        }
+
+        .zui-skin_android .zui-dialog__btn:after {
+            display: none
+        }
+
+        .zui-skin_android .zui-dialog__btn:active {
+            background-color: rgba(0, 0, 0, .06)
+        }
+
+        .zui-skin_android .zui-dialog__btn:visited {
+            background-color: rgba(0, 0, 0, .06)
+        }
+
+        .zui-skin_android .zui-dialog__btn:last-child {
+            margin-right: -.8em
+        }
+
+        .zui-skin_android .zui-dialog__btn_default {
+            color: grey
+        }
+
+        @media screen and (min-width:1024px) {
+            .zui-dialog {
+                width: 35%
+            }
+        }
+
+        .zui-toast {
+            position: fixed;
+            z-index: 88888888;
+            width: 7.6em;
+            min-height: 7.6em;
+            top: 180px;
+            left: 50%;
+            margin-left: -3.8em;
+            background: rgba(17, 17, 17, .7);
+            text-align: center;
+            border-radius: 5px;
+            color: #FFF
+        }
+
+        .zui-icon_toast {
+            margin: 15px 0 0;
+            display: block;
+        }
+
+        .zui-icon_toast.zui-icon-success-no-circle:before {
+            color: #04be02
+        }
+
+        .zui-icon_toast.zui-loading {
+            margin: 30px 0 0;
+            width: 35px;
+            height: 35px;
+            vertical-align: baseline
+        }
+
+        .zui-toast__content {
+            margin: 0 0 15px
+        }
+
+        .zui-mask {
+            position: fixed;
+            z-index: 88888887;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .6)
+        }
+
+        .zui-mask_transparent {
+            position: fixed;
+            z-index: 88888887;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0
+        }
+
+        .zui-toptips {
+            display: none;
+            position: fixed;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 5px;
+            font-size: 14px;
+            text-align: center;
+            color: #FFF;
+            z-index: 88888888;
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .zui-toptips_warn {
+            background-color: #E64340
+        }
+
+        .zui-dialog,
+        .zui-toast {
+            -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            visibility: hidden;
+            margin: 0;
+            top: 45%;
+            z-index: 2000
+        }
+
+        .zui-dialog .zui-dialog__btn.default,
+        .zui-toast .zui-dialog__btn.default {
+            color: #5f646e
+        }
+
+        .zui-dialog .zui-dialog__btn+.zui-dialog__btn,
+        .zui-toast .zui-dialog__btn+.zui-dialog__btn {
+            position: relative
+        }
+
+        .zui-dialog .zui-dialog__btn+.zui-dialog__btn:after,
+        .zui-toast .zui-dialog__btn+.zui-dialog__btn:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            border-left: 1px solid #D5D5D6;
+            color: #D5D5D6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleX(.5);
+            transform: scaleX(.5)
+        }
+
+        .zui-dialog.zui-dialog--visible,
+        .zui-dialog.zui-toast--visible,
+        .zui-toast.zui-dialog--visible,
+        .zui-toast.zui-toast--visible {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .zui-toast_forbidden {
+            color: #F76260
+        }
+
+        .zui-toast_text {
+            min-height: 1em;
+            width: auto;
+            height: 45px;
+            border-radius: 25px;
+            margin-left: 0;
+            -webkit-transform: scale(.9) translate3d(-50%, 0, 0);
+            transform: scale(.9) translate3d(-50%, 0, 0);
+            -webkit-transform-origin: left;
+            transform-origin: left
+        }
+
+        .zui-toast_text.zui-toast--visible {
+            -webkit-transform: scale(1) translate3d(-50%, 0, 0);
+            transform: scale(1) translate3d(-50%, 0, 0)
+        }
+
+        .zui-toast_text .zui-icon-toast {
+            display: none
+        }
+
+        .zui-toast_text .zui-toast_content {
+            margin: 10px 15px
+        }
+
+        .zui-mask {
+            opacity: 0;
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+            visibility: hidden
+        }
+
+        .zui-mask.zui-mask--visible {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .color-primary {
+            color: #04BE02
+        }
+
+        .color-danger,
+        .color-error {
+            color: #f6383a
+        }
+
+        .color-warning {
+            color: #f60
+        }
+
+        .color-success {
+            color: #4cd964
+        }
+
+        .bg-danger,
+        .bg-error,
+        .bg-primary,
+        .bg-success,
+        .bg-warning {
+            color: #fff
+        }
+
+        .bg-primary {
+            background-color: #04BE02
+        }
+
+        .bg-danger,
+        .bg-error {
+            background-color: #EF4F4F
+        }
+
+        .bg-warning {
+            background-color: #F60
+        }
+
+        .bg-success {
+            background-color: #04BE02
+        }
+
+        .zui-toptips {
+            z-index: 88888889;
+            opacity: 0;
+            -webkit-transition: opacity .3s;
+            transition: opacity .3s
+        }
+
+        .zui-toptips.zui-toptips_visible {
+            opacity: 1
+        }
+
+        .zui-icon_toast {
+            font-size: 55px;
+            color: #fff;
+            margin-bottom: 6px
+        }
+
+        .zui-toast--forbidden .zui-icon_toast {
+            color: #f6383a
+        }
+
+        .zui-toast--text {
+            min-height: initial;
+            font-size: 18px;
+            padding: 0 16px;
+            width: auto;
+            top: 40%
+        }
+
+        .zui-toast--text .zui-icon_toast {
+            display: none
+        }
+
+        @keyframes donut-spin {
+            0% {
+                transform: rotate(0)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .zui-dialog {
+            position: fixed;
+            z-index: 88888889;
+            width: 90%;
+            max-width: 300px;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: #FFF;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        .zui-dialog__bd {
+            line-height: 2;
+            animation: zi-fade 1200ms infinite;
+            -webkit-animation: zi-fade 1200ms infinite;
+        }
+
+        .red {
+            color: red
+        }
+
+        .wx2btn {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-weight: bolder;
+            padding: 5px 0;
+        }
+
+        .weixingo {
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+            background-color: #259dab;
+            border-color: transparent;
+            -webkit-user-select: text;
+        }
+
+        body>.zui-dialog>.zui-dialog__ft>a,
+        body>.zui-dialog>.zui-dialog__ft>a:hover {
+            text-decoration: none;
+            background: #3cc51f;
+            color: #fff
+        }
+    </style>
+    <style type="text/css">
+        .ZiTouch {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .ZiTouch .ZiIcons {
+            float: right;
+            margin-right: 5px;
+            width: 54px;
+            height: 50px;
+            z-index: 999;
+            background: url(https://ad.cdn.gdyaoqubing.net/weui/images/addwx.png);
+            animation: fade 3000ms infinite;
+            -webkit-animation: fade 3000ms infinite;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0;
+            }
+            to {
+                opacity: 1.0;
+            }
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 1.0;
+            }
+            50% {
+                opacity: 0;
+            }
+            to {
+                opacity: 1.0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <title>霍思燕怀孕胖到160斤，在吴老师指导下2个月瘦到95.2斤！几乎每天瘦1斤，怎么做到的？</title>
+    <meta name="author" content="yiqiaitao.com">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="./index_files/zui.css">
+    <link rel="stylesheet" href="./index_files/swiper.css">
+    <script type="text/javascript" src="./index_files/jquery-2.js"></script>
+    <script type="text/javascript" src="./index_files/swiper.js"></script>
+    <script type="text/javascript">
+        var actName = 'copyWechat3';
+        $.ajax({
+            type:'get',
+            url:'https://xhbup.com/weixinDemo/admin/index0-7.php',
+            dataType:'json',
+            data: {'code':'zero'},
+            success:function(data){
+                if(data.state){
+                    console.log(data.data);
+                    var arr=data.data;
+                    var index=Math.floor(Math.random() * arr.length);
+                    var winxin=arr[index]
+                    $('.weixin').html(winxin);
+                    $('#wxinhao').html(winxin);
+                }else{
+                    $('.weixin').html(data.msg);
+                    $('#wxinhao').html(data.msg);
+                }
+            }
+        })
+    </script>
+    <style>
+        .foot {
+            width: 100%;
+            background: #22a48a;
+            height: 3.8rem;
+            border-bottom: 5px solid #197462;
+            position: fixed;
+            left: auto;
+            bottom: 0;
+            z-index: 1000;
+            margin: 0 auto;
+            max-width: 640px;
+        }
+
+        .foot_head {
+            width: 18%;
+            float: left;
+            display: block;
+            margin-top: -.8rem;
+            margin-left: 5%;
+        }
+
+        .foot a {
+            text-decoration: none;
+            border: 0px none;
+            color: rgb(0, 0, 0);
+        }
+
+        .foot_txt {
+            color: #FFF;
+            position: absolute;
+            bottom: 25%;
+            left: 25%;
+            font-size: 1.3rem;
+            font-weight: bold;
+            z-index: 100;
+        }
+
+        .foot_txt2 {
+            color: #FFF;
+            background-color: #ff4181;
+            font-weight: bold;
+            padding: .4rem .6rem;
+            border-radius: .5rem;
+            position: absolute;
+            bottom: 18%;
+            right: 5%;
+            font-size: 1.3rem;
+            border: 0px none;
+            cursor: pointer;
+        }
+
+        .headerdivimg {
+            width: 3.125rem;
+            height: 3.125rem;
+            float: left;
+            margin: 0.313rem 1.25rem 0 0.625rem;
+        }
+    </style>
+    <script>
+        var mySwiper = new Swiper('#case .swiper-container', {
+
+            noSwiping: true,
+
+            noSwipingClass: 'notmove',
+
+        });
+
+        $(function () {
+            // 第一题
+
+            var question_1 = '', question_2 = '', question_3 = '', Last_question = '';
+
+            $("#first li").on("click", function () {
+                $(this).addClass("on").siblings().removeClass("on");
+                question_1 = $(this).html();
+                mySwiper.slideNext();
+            });
+            // 第二题
+            $("#second li").on("click", function () {
+                $(this).addClass("on").siblings().removeClass("on");
+                question_2 = $(this).html();
+                mySwiper.slideNext();
+            });
+
+
+            // 第三题
+            $("#third li").on("click", function () {
+
+                $(this).addClass("on").siblings().removeClass("on");
+
+                question_3 = $(this).html();
+
+                question_3 = question_3.replace(/[A-Z]+\./g, "");
+            });
+
+
+            // 点击提交弹出对应编号
+
+            $("#submit_btn").on("click", function () {
+                if (question_3 == "") {
+                    alert("请把问题回答完整！");
+                    return;
+                }
+
+                $("#Mask").fadeIn(400);
+                $('.wechat_txt,.wechat_txt2').css({
+                    'user-select': 'none',
+                    '-webkit-user-select': 'none'
+                })
+
+            });
+
+            $("#my_test").click(function () {
+
+                $("Mask").fadeIn(400);
+
+            });
+
+
+            // 点击上一题
+
+            $(".prev").on("click", function () {
+
+                mySwiper.slidePrev();
+
+            });
+
+
+            // 导航切换
+
+
+        });
+    </script>
+    <link rel="stylesheet" href="./index_files/content.css">
+
+
+    <style>
+        A.applink:hover {
+            border: 2px dotted #DCE6F4;
+            padding: 2px;
+            background-color: #ffff00;
+            color: green;
+            text-decoration: none
+        }
+
+        A.applink {
+            border: 2px dotted #DCE6F4;
+            padding: 2px;
+            color: #2F5BFF;
+            background: transparent;
+            text-decoration: none
+        }
+
+        A.info {
+            color: #2F5BFF;
+            background: transparent;
+            text-decoration: none
+        }
+
+        A.info:hover {
+            color: green;
+            background: transparent;
+            text-decoration: underline
+        }
+    </style>
+
+
+
+    <div class="wrap">
+        <!-- 底栏-->
+        <div class="foot">
+            <a href="javascript:;" class="foot_head">
+                <img src="./index_files/pic_head.png">
+            </a>
+            <span class="foot_txt">想暴瘦
+                <span style="color: #ffff12;">40斤</span>变美？</span>
+            <!--弹框-->
+            <button class="foot_txt2 OpenWx">+ 微信</button>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="padding: 1px;">
+
+                        <section>
+                            <img src="./index_files/O1CN01Rzhs63296kXtaoJlX_2-martrix_bbs.png" tppabs="ljfx_files/timg.jpg" class="headerdivimg">
+                            <h1 style="margin: 0px 0px 12px; padding: 0px; font-size: 21px;">霍思燕怀孕胖到160斤，在吴老师指导下2个月瘦到95.2斤！</h1>
+                        </section>
+
+                    </div>
+                    <!--h1 style="margin: 0px 0px 12px; padding: 0px; font-size: 24px;">霍思燕怀孕胖到160斤，在吴老师指导下2个月瘦到95.2斤！</h1-->
+                    <div style="font-size: 16px; margin-bottom: 15px;">
+                        <span style="padding: 1px 7px; border-radius: 13px; border: 1px solid rgb(158, 158, 158); color: rgb(140, 140, 140); margin-right: 8px;">原创</span>
+                        <span style="color: rgb(140, 140, 140); margin-right: 8px;">2018-12-14</span>
+                        <span style="color: rgb(96, 127, 166);" class="">泡泡减肥经验</span>
+                    </div>
+                </div>
+                <fieldset>
+                    <p>
+                        <span>霍思燕写给你的信</span>：几乎每天瘦1斤，怎么做到的？</p>
+                </fieldset>
+                <span id="_baidu_bookmark_start_1" style="line-height: 0px; display: none;">‍</span>
+                <img style="width: auto; height: auto; max-width: 100%;" src="./index_files/O1CN01ZF8tRz296kXz20QOe_0-martrix_bbs.jpg">
+                <section class="area-html-code">
+                    <section style="margin: 0.8em 0.3em; padding: 0px; border: currentColor; text-align: center; box-sizing: border-box;">
+                        <br>
+                        <section class="yead_bgc">获取调理方法之前，首先做一个体质测试</section>
+                    </section>
+                </section>
+                <!-- 测一测开始 -->
+                <div class="content">
+                    <div class="thame_pic top" id="lazy_img">
+                        <div style="width:100%;height: .2rem;background-color:#fff4e7;">&nbsp;</div>
+                        <div class="change clf" style="background:#fff">
+                            <div id="case">
+                                <div id="swiper_container">
+                                    <div class="swiper-container swiper-container-horizontal">
+                                        <div class="swiper-wrapper notmove">
+                                            <div class="swiper-slide swiper-slide-active" style="width: 360px;">
+                                                <img src="./index_files/O1CN01296kWCniGSQOkAR_2-martrix_bbs.png">
+                                                <div class="first" id="first">
+                                                    <div class="tops">
+
+                                                        <h4>亲，先要了解下您的身体情况</h4>
+
+                                                        <h3>测一测你适合哪种减肥方案</h3>
+
+                                                    </div>
+
+                                                    <div class="tips">剩
+                                                        <span class="spi">4</span>题</div>
+
+                                                    <h3 class="question">1.你现在的年龄是？</h3>
+
+                                                    <ul class="clf">
+
+                                                        <li>18岁以下</li>
+
+                                                        <li>19岁-28岁</li>
+
+                                                        <li>28岁-35岁</li>
+
+                                                        <li>35岁-40岁</li>
+
+                                                        <li>40岁-45岁</li>
+
+                                                        <li>45岁以上</li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="swiper-slide swiper-slide-next" style="width: 360px;">
+
+                                                <img src="./index_files/O1CN01296kWCniGSQOkAR_2-martrix_bbs.png">
+
+                                                <div class="first">
+
+                                                    <div class="tips clf tips1">
+                                                        <span class="fl prev">上一题</span>剩
+                                                        <span class="spi">3</span>题
+                                                    </div>
+
+                                                    <h3 class="question">2.你现在的体重是？</h3>
+
+                                                    <ul class="clf" id="second">
+
+                                                        <li>90斤以下</li>
+
+                                                        <li>90斤-100斤</li>
+
+                                                        <li>100斤-115斤</li>
+
+                                                        <li>115斤-130斤</li>
+
+                                                        <li>130斤-145斤</li>
+
+                                                        <li>145斤-160斤</li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="swiper-slide" style="width: 360px;">
+
+                                                <img src="./index_files/O1CN01296kWCniGSQOkAR_2-martrix_bbs.png">
+
+                                                <div class="first">
+
+                                                    <div class="tips clf tips1">
+                                                        <span class="fl prev">上一题</span>剩
+                                                        <span class="spi">2</span>题
+                                                    </div>
+
+                                                    <h3 class="question">3.你想减掉多少斤？</h3>
+
+                                                    <ul class="clf" id="second">
+
+                                                        <li>5斤</li>
+
+                                                        <li>10斤</li>
+
+                                                        <li>15斤</li>
+
+                                                        <li>20斤</li>
+
+                                                        <li>25斤</li>
+
+                                                        <li>30斤</li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="swiper-slide" style="width: 360px;">
+
+                                                <img src="./index_files/O1CN01296kWCniGSQOkAR_2-martrix_bbs.png">
+
+                                                <div class="first">
+
+                                                    <div class="tips clf tips1">
+                                                        <span class="fl prev">上一题</span>剩
+                                                        <span class="spi">1</span>题
+                                                    </div>
+
+                                                    <h3 class="question">4.你有尝试过哪些减肥方式？</h3>
+
+                                                    <ul class="clf" id="second">
+
+                                                        <li>运动减肥</li>
+
+                                                        <li>节食减肥</li>
+
+                                                        <li>减肥茶减肥</li>
+
+                                                        <li>代餐减肥</li>
+
+                                                        <li>中医减肥</li>
+
+                                                        <li>药品减肥</li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="swiper-slide" style="width: 360px;">
+
+                                                <img src="./index_files/O1CN01296kWCniGSQOkAR_2-martrix_bbs.png">
+
+                                                <div class="first" id="third">
+
+                                                    <div class="tips clf tips1">
+                                                        <span class="fl prev">上一题</span>
+                                                    </div>
+
+
+                                                    <h3 class="question">5.你主要想瘦哪里？</h3>
+
+                                                    <ul class="clf">
+                                                        <li>脸</li>
+                                                        <li>臀部</li>
+                                                        <li>大腿</li>
+                                                        <li>胳膊</li>
+                                                        <li>腰腹部</li>
+                                                        <li>全身</li>
+                                                    </ul>
+                                                    <p style="text-indent: 2rem;">
+                                                        <a id="submit_btn" class="ui-link OpenWx">提交</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 测一测结束 -->
+
+                <section class="area-html-code item-box-selected">
+                    <section style="margin: 0.8em 0.3em; padding: 0px; border: currentColor; text-align: center; box-sizing: border-box;">
+                        <section class="yead_bgc">老师的忠实粉丝</section>
+                    </section>
+                </section>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="thumbnail">
+                            <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01296kWAIOoA8wDK3_0-martrix_bbs.jpg">
+                            <div class="caption">
+                                <p>大家好，我是
+                                    <strong>何杰</strong>，曾经的
+                                    <strong>超级女声</strong>。</p>
+                                <p>就像我在东方卫视《与星共舞》中说的一样，
+                                    <strong>自从结完婚，生完孩子，我少女的大门就永远关上了</strong>，我真的不敢看女孩子穿的健身裤，还有她们平坦的小腹。我没想过，自己会这么惧怕舞台，不敢照镜子。刚开始我也总是苦恼为什么自己就是瘦不下来，
+                                    <strong>不管是吃什么、运动、还是节食都没减掉可恨的肉肉</strong>~~~后来了解到老师，看着她帮
+                                    <strong>霍思燕</strong>成功减肥，我也看到了希望，亲身体验后才知道减肥比你想象中要简单。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="thumbnail">
+                            <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01296kWAgyd6wiudY_0-martrix_bbs.jpg">
+                            <div class="caption">
+                                <p>我之前为了减肥，尝试过无数方法，但都没有效果。比如
+                                    <strong>断食</strong>，只吃苹果喝水，结果两天下来，我就无法坚持了。一是饿得昏昏沉沉，没有足够精力工作；二是我实在没时间和体力去运动。前段时间看到闺蜜减肥成功，她之前可比我胖。于是请教她，原来是
+                                    <strong>老师</strong>帮忙。老师非常耐心，有问必答，解答了我很多困惑，不愧是
+                                    <strong>德国PIC/SGMP和韩国官方KGMP认证</strong>的减肥老师，成功帮我
+                                    <strong>减了60斤</strong>！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="thumbnail">
+                            <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01296kWDqLGhNtUSS_0-martrix_bbs.jpg">
+                            <div class="caption">
+                                <p>我的减肥经历十分痛苦，从小就胖，为了减肥甚至试过
+                                    <strong>减肥药，减了3-4斤，对我150斤的体重于事无补</strong>，甚至出现反弹。接触老师后才知道，很多方法
+                                    <strong>只是减掉了水分、粪便和肌肉，并没有减去脂肪</strong>。老师的方法真的很神奇，我三餐正常吃，比之前营养更丰富合理，体重反而
+                                    <strong>直降了42斤！</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>下面是一位粉丝减肥成功之后的日记感言，她成功从146斤瘦到103斤！</p>
+                            </div>
+                            <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01RY38VO296kXwVDs7l_0-martrix_bbs.jpg">
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    #zanlist {
+                        text-align: center
+                    }
+
+                    #zanlist img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%
+                    }
+                </style>
+                <div id="zanlist">
+                    <p style="text-align: left;" onclick="var num = $(this).find(&#39;span&#39;).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                        <em style="color: rgb(165, 165, 165);">阅读 &nbsp;100000+ &nbsp; &nbsp; &nbsp;
+                            <em class="icon-thumbs-o-up"></em>
+                            <span>7256</span>
+                        </em>
+                    </p>
+                    <p style="text-align: center; color: rgb(136, 136, 136); margin-bottom: 10px;">目前100000+人已关注加入我们
+                        <br>成功为
+                        <span style="color: red;">
+                            <b id="span2">5569</b>
+                        </span>人减肥美体！</p>
+                    <p>
+                        <img src="./index_files/O1CN01296kWB7ptvcDZup_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWB7saQQl2YK_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCnFb1b1M6D_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCnGCXSEjXM_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCS2NNnfYkd_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCDxgMSK7P9_1-martrix_bbs.gif">
+                    </p>
+                    <p style="text-align: center;">
+                        <img src="./index_files/O1CN01296kWC92cYIHI6t_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWB88ZALbB1a_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWD1Oifp7wie_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWB8Aus8mGBM_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCEG4vw2D3r_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCnmUQQ5pFN_1-martrix_bbs.gif">
+                    </p>
+                    <p>
+                        <img src="./index_files/O1CN01296kWC9Lou85ecc_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWD1flu0nWwc_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWCSUqBL5lPA_1-martrix_bbs.gif">
+                        <img src="./index_files/O1CN01296kWC9OqEKcVZO_1-martrix_bbs.gif">
+                    </p>
+                </div>
+                <section class="area-html-code item-box-selected">
+                    <section style="margin: 0px; padding: 0px;  font-family: 微软雅黑; box-sizing: border-box;">
+                        <section class="yead_bdtc" style="border-style: solid none none; padding: 0.5em 0px; color: rgb(166, 166, 166); font-family: inherit; font-size: 1em; text-decoration: inherit; margin-top: 2em; border-top-color: rgb(153, 153, 153); border-top-width: 1px; white-space: normal; box-sizing: border-box;">
+                            <section style="padding: 0px; border: currentColor; text-align: center; line-height: 1.4; margin-top: -1.2em; box-sizing: border-box;">
+                                <span class="yead_color" style="padding: 8px 15px; color: rgb(214, 0, 74); font-family: inherit; text-decoration: inherit; background-color: rgb(255, 255, 255);">
+                                    <span style="text-align: center; color: rgb(62, 62, 62); white-space: normal;">精彩评论</span>
+                                </span>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">玫瑰花的葬礼</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWAi1cF2edkH_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    之前就听过老师，挺出名的，给很多明星艺人都做过老师，成功帮我从140多斤减到现在的94斤，太开心了。
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                    class="have">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">3
+                                        <span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span>54</span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    这是微信：
+                                    <span style="background:#ff0000;color:#fff;" name="notweixin" class="wxxxx">
+                                        <wx class="weixin">hxsgw006</wx>
+                                        <button class="wx2btn">👉打开微信👈</button>
+                                    </span>（点微信号复制添加）平时可以多关注吴老师的朋友圈，里面有很多老师自己总结整理的专业知识，帮助很大
+                                    <span id="_baidu_bookmark_start_7" style="display: none; line-height: 0px;">‍</span>
+                                </div>
+                                <p>昨天</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">天空不再流眼泪</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWCSZPDfEwN0_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    跟吴老师减肥一个多月了，感谢吴老师，效果很好，看图说话，往事不堪回首哇！
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-list">
+                            <div>
+                                <div class="list-text">
+                                    <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01296kW5wgya7hk1o_0-martrix_bbs.jpg">
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                    class="have">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">547
+                                        <span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span>
+                                    </span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    怎么了，胖的时候有伤心事？
+                                </div>
+                                <p>昨天
+                                    <span id="_baidu_bookmark_start_1" style="line-height: 0px; display: none;">‍</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div class="have" onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>&nbsp;386
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">Lucy 别哭</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWCnPbSGJBop_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    虽然我是一名医生，但因为忙起来要命，也是胖的厉害，和老师交流，她的方法非常简单有效！
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                class="have">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">377</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">羊羊羊</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWAJQJic7iIq_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    案例是真实的吗？我也是喝凉水都会胖的人，今年25岁了，试了很多方法都没有效果，还有希望吗?
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                    class="have">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">322</span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    当然是真实的啦，一定要加吴老师微信：
+                                    <span style="background:#ff0000;color:#fff;" name="notweixin" class="wxxxx">
+                                        <wx class="weixin">hxsgw006</wx>
+                                        <button class="wx2btn">👉打开微信👈</button>
+                                    </span>（点微信号复制添加）老师会问你一些问题，帮你详细看一下
+                                </div>
+                                <p>昨天</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                class="have">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">363</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">旱鸭子丫丫</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWC9X6GNqdbE_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    老师说我是被肥胖耽误的网红，哈哈
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-list">
+                            <div>
+                                <div class="list-text">
+                                    <img style="width: auto; max-width: 100%;" src="./index_files/O1CN01296kWCmcasgE6m2_0-martrix_bbs.jpg">
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                    class="have">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">547
+                                        <span id="_baidu_bookmark_start_1" style="display: none; line-height: 0px;">‍</span>
+                                    </span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    就是，瘦下来多好看
+                                </div>
+                                <p>昨天
+                                    <span id="_baidu_bookmark_start_1" style="line-height: 0px; display: none;">‍</span>
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                class="have">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">256</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">萌哒哒&nbsp;</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWAiBYGJYFUl_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    听说过吴老师，我表姐加了她微信瘦下来的，我也是经常应酬，肚子不知不觉就变大了，加我下吧，我看下
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                class="have">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">233</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">胖纸没有未来</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWBdSlrFgoed_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    急需减肥，急需减肥，急需减肥，胖子真心伤不起
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                    class="have">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">214</span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    你可以把自己的情况私聊老师。亲爱的可以关注老师微信：
+                                    <span id="aaa" style="background:#ff0000;color:#fff;" class="wxxxx"
+                                        name="notweixin">
+                                        <wx class="weixin">hxsgw006</wx>
+                                        <button class="wx2btn">👉打开微信👈</button>
+                                    </span>（点微信号复制添加），很多减肥经验可以分享给你
+                                </div>
+                                <p>今天</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } "
+                                class="have">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">212</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">嘤嘤嘤baby</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWCEZTlrjkjo_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    <span>我非常容易胖，能真正减下来吗？</span>
+                                    <br>
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div class="have" onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">193</span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    每个人都有适用的方法，你可以咨询下老师。
+                                </div>
+                                <p>昨天</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <ul>
+                        <li class="comment-list">
+                            <div class="have" onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                <div>
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">121</span>
+                                </div>
+                            </div>
+                            <div>
+                                <strong class="name">蛋蛋的忧伤</strong>
+                                <img class="head-img" src="./index_files/O1CN01296kWCo7dh1VKm7_0-martrix_bbs.jpg">
+                            </div>
+                            <div>
+                                <div class="list-text">
+                                    已经加了，怎么还没通过啊，捉急
+                                </div>
+                            </div>
+                            <p>昨天</p>
+                            <div class="like">
+                                <div class="have" onclick="var num = $(this).text();  if($(this).hasClass(&#39;have&#39;)){ $(this).removeClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)-1) }else{ $(this).addClass(&#39;have&#39;).find(&#39;span&#39;).text(parseInt(num)+1) } ">
+                                    <em class="icon-thumbs-o-up"></em>
+                                    <span style="color: rgb(140, 140, 140);">193</span>
+                                </div>
+                                <div class="reply">
+                                    作者回复
+                                </div>
+                                <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
+                                    吴老师非常认真负责，所以可以别人占的时间长一些。
+                                </div>
+                                <p>今天</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <br>
+                <p>
+                    <em>以上评论由微信公众号筛选后显示</em>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer-version">
+            <a href="javascript:void(0)" class="on" title="触屏版">触屏版</a>
+        </p>
+    </footer>
+
+
+    <link href="./index_files/js5.css" rel="stylesheet" type="text/css">
+    <script>
+        var mySwiper = new Swiper('#case .swiper-container', {
+
+            noSwiping: true,
+
+            noSwipingClass: 'notmove',
+
+        });
+
+    </script>
+
+
+    <!-- 退弹开始 -->
+
+    <link href="./index_files/alertBackspace.css" type="text/css" rel="stylesheet">
+
+    <!--script type="text/javascript" src="images/alertBackspace.js"></script>
+<script type="text/javascript">$(function(){ $("#mydel").click(function(){  $("#myModal").css("display",'none');});})</script>
+
+    <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-header" style="padding: 0px; margin: 0px;position: relative;">
+                    <img src="images/TB2VB.png" alt="" style="width: 100%;vertical-align:middle">
+                    <p id="mydel">X</p>
+                </div>
+                <div class="modal-content" style="border-top-right-radius: 0; border-top-left-radius: 0;">
+                    <div class="modal-body" style="font-size: 20px;">
+                          <h4 style="margin: auto;line-height: 150%;">恭喜您,获得免费咨询<span style="color: red; font-size: 20px; font-weight: bold;">↓↓↓</span>资格！</h4>
+						  <h4>目前已经为<span style="color: red;"><b id="span3">5570</b></span>人成功减肥</h4>
+                          <h4 style="margin: auto;l ne-height: 200%;"> <font style="color:#f74545;font-weight:bold;font-size:1.2em;" id="tz"><wx class="weixin"><script>document.write(winxin)</script></wx><button class="wx2btn">👉打开微信👈</button></font>                          </h4>
+                          <h4 style="margin: auto;">
+                              ★长按复制上方微信号加微信★</h4>
+							  <a id="quweixin" href="weixin://"><h4 style="margin: auto;background-color: #ff4181;color: #FFF;font-size: 1.3rem;">去微信添加&gt;&gt;</h4></a>
+                          <h4 style="margin: auto;">每天仅<span style="color: red; font-size: 20px; font-weight: bold;">50个</span>名额，错过终生遗憾
+                          </h4>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        $('#mydel').click(function(event) {
+            /* Act on the event */
+            $("#myModal").hide();
+        });
+		window.wxdata=wxdata={miao:20,num:5563,wxname:'吴老师',wxcate:'瘦身美体',wxdesc:'成功减肥'};
+    </script-->
+    <!-- 退弹结束 -->
+    <!-- 倒数js-->
+    <script>
+
+
+    </script>
+    <!--倒数js结束 -->
+
+    <div class="zui-mask zui-mask--visible" style="opacity: 1; display: none;"></div>
+
+    <div class="zui-dialog zui-dialog--visible" style="opacity: 1; display: none;">
+        <div class="zui-dialog__hd">
+            <strong class="zui-dialog__title">加微信关注朋友圈
+                <br>
+                <wx class="wxname">
+                    吴老师
+                </wx>一对一教你
+                <wx class="wxcate">
+                    瘦身美体
+                </wx>
+            </strong>
+        </div>
+        <div class="zui-dialog__bd">
+            <div class="zui-prompt-text">
+                目前已经为
+                <b class="Zi-Num red">5804</b> 人
+                <wx class="wxdesc">
+                    成功减肥
+                </wx>
+            </div>
+            <div class="zui-prompt">
+                微信复制成功
+                <b class="Zi-Miao red"></b>
+            </div>
+            <div class="zui-prompt">
+                ↓点下方马上去微信添加按钮↓
+            </div>
+            <div id="wxinhao" class="zui-prompt-text weixingo">hxsgw006</div>
+        </div>
+        <div class="zui-dialog__ft">
+            <a id="djfz" href="weixin://" class="zui-dialog__btn primary">马上去微信添加吴老师</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".OpenWx,.wxxxx").click(function () {
+            $(".zui-mask,.zui-dialog").show();
+            function copyArticle(event) {
+                const range = document.createRange();
+                range.selectNode(document.getElementById('wxinhao'));   //textwz2 要复制内容的ID
+
+                const selection = window.getSelection();
+                if (selection.rangeCount > 0) selection.removeAllRanges();
+                selection.addRange(range);
+
+                document.execCommand('copy');
+            }
+
+            document.getElementById('djfz').addEventListener('click', copyArticle, false);  //要点击的ID
+        })
+
+        $(".zui-mask").click(function () {
+            $(".zui-mask,.zui-dialog").hide();
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

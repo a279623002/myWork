@@ -14,12 +14,10 @@ function setTxt($str) {
     $StrConents = $str;//要 写进文件的内容
     if(!fwrite ($TxtRes,$StrConents)){ //将信息写入文件
         echo ("尝试向文件".$TxtFileName."写入".$StrConents."失败！");
-        fclose($TxtRes);
-        // exit();
         return array('state'=>false, 'msg'=>'失败');
     }
     echo ("尝试向文件".$TxtFileName."写入".$StrConents."成功！");
-    // fclose ($TxtRes); //关闭指针
+    fclose ($TxtRes); //关闭指针
     return array('state'=>true, 'msg'=>'失败');
 }
 
@@ -27,7 +25,8 @@ function getTxt($code) {
     if ($code == 'zero') {
         $url = './demo.txt';
         $txt = file_get_contents($url);
-        $result = array('state'=>true, 'data'=>$txt);
+        $data = explode(',', $txt);
+        $result = array('state'=>true, 'data'=>$data);
     }else {
         $result = array('state'=>false, 'msg'=>'code码不正确!');
     }
@@ -54,7 +53,11 @@ if(isset($_GET['code'])){
 </head>
 <body>
     <form id="taskForm" method="post">
-        <input type="text" name="text">
+        <?php
+            $url = './demo.txt';
+            $weixin = file_get_contents($url);
+            echo "<input type='text' name='text' value='{$weixin}'>";
+        ?>
         <button>提交</button>
     </form>
     <button id="getTxt">获取</button>
