@@ -14,12 +14,10 @@ function setTxt($str) {
     $StrConents = $str;//要 写进文件的内容
     if(!fwrite ($TxtRes,$StrConents)){ //将信息写入文件
         echo ("尝试向文件".$TxtFileName."写入".$StrConents."失败！");
-        fclose($TxtRes);
-        // exit();
         return array('state'=>false, 'msg'=>'失败');
     }
     echo ("尝试向文件".$TxtFileName."写入".$StrConents."成功！");
-    // fclose ($TxtRes); //关闭指针
+    fclose ($TxtRes); //关闭指针
     return array('state'=>true, 'msg'=>'失败');
 }
 
