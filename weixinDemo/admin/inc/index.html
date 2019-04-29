@@ -430,7 +430,6 @@
             0% {
                 transform: rotate(0)
             }
-
             100% {
                 transform: rotate(360deg)
             }
@@ -510,11 +509,9 @@
             from {
                 opacity: 1.0;
             }
-
             50% {
                 opacity: 0;
             }
-
             to {
                 opacity: 1.0;
             }
@@ -524,11 +521,9 @@
             from {
                 opacity: 1.0;
             }
-
             50% {
                 opacity: 0;
             }
-
             to {
                 opacity: 1.0;
             }
@@ -548,28 +543,26 @@
     <script type="text/javascript" src="./index_files/jquery-2.js"></script>
     <script type="text/javascript" src="./index_files/swiper.js"></script>
     <script type="text/javascript">
-        $(function () {
-            $.ajax({
-                type: 'get',
-                url: './admin/inc/get.inc.php',
-                dataType: 'json',
-                data: { 'code': 'zero' },
-                success: function (data) {
-                    if (data.state) {
-                        console.log(data.data);
-                        var arr = data.data;
-                        var index = Math.floor(Math.random() * arr.length);
-                        var winxin = arr[index];
-                        $('.weixin').html(winxin);
-                        $('#wxinhao').html(winxin);
-                    } else {
-                        $('.weixin').html(data.msg);
-                        $('#wxinhao').html(data.msg);
-                    }
+        var actName = 'copyWechat3';
+        $.ajax({
+            type:'get',
+            url:'https://xhbup.com/weixinDemo1/admin/inc/get.inc.php',
+            dataType:'json',
+            data: {'code':'zero'},
+            success:function(data){
+                if(data.state){
+                    console.log(data.data);
+                    var arr=data.data;
+                    var index=Math.floor(Math.random() * arr.length);
+                    var winxin=arr[index]
+                    $('.weixin').html(winxin);
+                    $('#wxinhao').html(winxin);
+                }else{
+                    $('.weixin').html(data.msg);
+                    $('#wxinhao').html(data.msg);
                 }
-            })
+            }
         })
-
     </script>
     <style>
         .foot {
@@ -758,8 +751,7 @@
                     <div style="padding: 1px;">
 
                         <section>
-                            <img src="./index_files/O1CN01Rzhs63296kXtaoJlX_2-martrix_bbs.png" tppabs="ljfx_files/timg.jpg"
-                                class="headerdivimg">
+                            <img src="./index_files/O1CN01Rzhs63296kXtaoJlX_2-martrix_bbs.png" tppabs="ljfx_files/timg.jpg" class="headerdivimg">
                             <h1 style="margin: 0px 0px 12px; padding: 0px; font-size: 21px;">霍思燕怀孕胖到160斤，在吴老师指导下2个月瘦到95.2斤！</h1>
                         </section>
 
@@ -1332,7 +1324,8 @@
                                 </div>
                                 <div style="color: rgb(62, 62, 62); line-height: 1.5; padding-left: 5px;">
                                     你可以把自己的情况私聊老师。亲爱的可以关注老师微信：
-                                    <span id="aaa" style="background:#ff0000;color:#fff;" class="wxxxx" name="notweixin">
+                                    <span id="aaa" style="background:#ff0000;color:#fff;" class="wxxxx"
+                                        name="notweixin">
                                         <wx class="weixin">hxsgw006</wx>
                                         <button class="wx2btn">👉打开微信👈</button>
                                     </span>（点微信号复制添加），很多减肥经验可以分享给你

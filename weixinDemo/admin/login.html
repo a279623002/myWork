@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <style>
+        body {
+            background: black;
+        }
+
+        main {
+            width: 90%;
+            margin: 50px auto 0 auto;
+        }
+
+        form {
+            width: 90%;
+            padding: 5%;
+            border: 1px solid rgb(255, 0, 0, .5);
+        }
+
+        main form label {
+            display: block;
+            width: 100%;
+            color: #FFF;
+            text-align: center;
+        }
+
+        main form input {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            display: block;
+            margin: 10% auto;
+        }
+
+        main form button {
+            width: 100px;
+            background: skyblue;
+            color: #FFF;
+            height: 30px;
+            border: 1px solid yellow;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="" id="taskForm">
+            <label for="ps">登录密码</label>
+            <input type="password" name="ps" id="ps">
+            <button onclick="login();return false;">登录</button>
+        </form>
+    </main>
+    <script>
+        function login() {
+            $.ajax({
+                type: 'post',
+                url: './inc/check.inc.php',
+                dataType: 'json',
+                data: $('#taskForm').serialize(),
+                success: function (data) {
+                    alert(data.msg);
+                    if(data.state) window.location.href = './index.php';
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

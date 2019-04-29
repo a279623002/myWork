@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+
+  <meta content="yes" name="apple-mobile-web-app-capable">
+
+  <meta content="yes" name="apple-touch-fullscreen">
+
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+
+  <meta content="320" name="MobileOptimized">
+
+  <meta content="telephone=no" name="format-detection">
+
+  <link rel="stylesheet" href="goods/qdwap.css">
+
+  <LINK href="favicon.ico" type="image/x-icon" rel=icon>
+
+  <title>【蚊子克星】黑科技家用灭蚊灯</title>
+
+  <meta name="keywords" content="【蚊子克星】黑科技家用灭蚊灯">
+
+  <meta name="description" content="【蚊子克星】黑科技家用灭蚊灯">
+
+  <link rel="stylesheet" href="index_files/mobile.css">
+
+
+
+  <script src="goods/jquery-1.11.0.min.js"></script>
+
+  <script src="js/jquery.cookie.js"></script>
+
+  <script src="goods/demo.js"></script>
+
+  <script>
+
+    //paraName 等找参数的名称
+
+    function GetUrlParam(paraName) {
+
+      var url = document.location.toString();
+
+      var arrObj = url.split("?");
+
+
+
+      if (arrObj.length > 1) {
+
+        var arrPara = arrObj[1].split("&");
+
+        var arr;
+
+
+
+        for (var i = 0; i < arrPara.length; i++) {
+
+          arr = arrPara[i].split("=");
+
+
+
+          if (arr != null && arr[0] == paraName) {
+
+            return arr[1];
+
+          }
+
+        }
+
+        return "";
+
+      }
+
+      else {
+
+        return "";
+
+      }
+
+    }
+
+    $(function () {
+      $.ajax({
+        type: 'get',
+        url: './admin/index.php',
+        dataType: 'json',
+        data: { 'code': 'zero' },
+        success: function (data) {
+          if (data.state) {
+            var url = document.location.toString();
+            var arrObj = url.split("?");
+            if (data.key !== '' && data.value !== '') {
+              if (arrObj.length === 1) window.location.href = document.URL + '?' + data.key + '=' + data.value;
+            }
+          }
+        }
+      })
+    })
+
+
+
+  </script>
+
+  <script>
+
+    var yhj = 0;
+
+    var loadImages = false;
+
+    window.onload = function () {
+
+      //ShowImages();
+
+    };
+
+    function hideHint() {
+
+      $('.info').animate({ top: -$('.info').outerHeight() }, 300);
+
+    }
+
+
+
+    function clearHint() {
+
+      $('.info').css('top', -$('.info').outerHeight());
+
+    }
+
+
+
+
+
+    function showHint() {
+
+      clearHint();
+
+
+
+      $('.info').animate({ top: "0" }, 300);
+
+    }
+
+
+
+    $(function () {
+
+      $('.add_e_hint').change(function () {
+
+        layer.closeAll('tips');
+
+        $('.add_e_hint').removeClass("error_hint");
+
+        $('.add_d_hint').removeClass("error_hint");
+
+      });
+
+      $('.add_d_hint').keydown(function () {
+
+        layer.closeAll('tips');
+
+        $('.add_e_hint').removeClass("error_hint");
+
+        $('.add_d_hint').removeClass("error_hint");
+
+      });
+
+      //setInterval("ShowImages()",5000);
+
+      function scollDown(id, time) {
+
+        var liHeight = $("#" + id + " ul li").height();
+
+        var time = time || 2500;
+
+        setInterval(function () {
+
+          $("#" + id + " ul").prepend($("#" + id + " ul li:last").css("height", "0px").animate({
+
+            height: liHeight + "px"
+
+          }, "slow"));
+
+        }, time);
+
+
+
+
+
+      }
+
+
+
+      scollDown("pingjia", 5000);
+
+      scollDown("fahuo", 3000);
+
+
+
+      setInterval("m_Timer()", 1000);
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+    function sendyzm() {
+
+      if (document.getElementById('mob').value == "") {
+
+        alert("手机号码为空！");
+
+      } else {
+
+        //window.open('app/sms/not_yzm.asp?smsid=3&tel='+document.getElementById('mob').value);
+
+        window.location.href = 'app/sms/not_yzm2dde2dde.html?smsid=3&amp;tel=' + document.getElementById('mob').value;
+
+      }
+
+    }
+
+    function getCookie(c_name) {
+
+      if (document.cookie.length > 0) {
+
+        c_start = document.cookie.indexOf(c_name + "=")
+
+        if (c_start != -1) {
+
+          c_start = c_start + c_name.length + 1
+
+          c_end = document.cookie.indexOf(";", c_start)
+
+          if (c_end == -1) c_end = document.cookie.length
+
+          return unescape(document.cookie.substring(c_start, c_end))
+
+        }
+
+      }
+
+      return ""
+
+    }
+
+    function getselectvalue() {
+
+      alert('dfdf');
+
+      //document.getElementById("proh").value=getCookie('papa_province');
+
+      //document.getElementById("cityh").value=getCookie('papa_city');
+
+      //document.getElementById("areah").value=getCookie('papa_area');
+
+    }
+
+  </script>
+
+
+
+
+
+
+
+  <style>
+
+    body{background: #856D35;}
+
+#page{max-width:640px; }
+
+</style>
+
+</head>
+
+
+
+<body style="background:white">
+
+  <div class="info message" style="top:-8000px;">
+
+    <h3 id="info_hint"></h3>
+
+  </div>
+
+
+
+
+
+  <div id="page">
+
+
+
+    <header>
+
+
+
+    </header>
+
+
+
+    <style>
+
+      .panel-wrap h3{background:#333;color:#fff;height:1.70666667rem;font-size:.64rem;padding-left:.64rem;line-height:1.70666667rem}.panel-wrap .order-desc{height:2.13333333rem;background-size:cover;background-image:url("data:image/png;base64,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");color:#fff;overflow:hidden}.panel-wrap .order-desc .m-left{float:left}.panel-wrap .order-desc .m-right{width:4.37333333rem;height:2.13333333rem;line-height:2.13333333rem;font-size:.512rem;float:right;padding-left:1.6rem;padding-right:0;background-size:cover;background-repeat:no-repeat;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAABkCAIAAACqzSMYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpmNzk1M2I5My03MWUwLWNiNDgtOWFmNy1lZjEwZTFlYjhkODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEU3Qjc3RkUzMUZFMTFFN0I2RjVBRDE3NkY5OUY0RDciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEU3Qjc3RkQzMUZFMTFFN0I2RjVBRDE3NkY5OUY0RDciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpjMjg5NTkwNy0xMDgyLTQ3ODMtOWVlMS02OTJmNGZmNzUxMGQiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDplOWYzMjhlOC02OWE5LTExN2EtYTYyYy1lYzljZDBjM2M0MzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Lq4aNAAAE+UlEQVR42uyd0VLbVhRFKzsYQ5LOJJnQmA/Ib/Tb+zOQkCHMFIKFHUWVTUsVaetcST5S7qC13hCc8cNec6+ut2WSzx8//jYKWZ7/dXHx/ceP8sV5kvx5fv5iNhthCn4hs9Fe6ct6XQ/+/cmJoYvvFEzCs4tv3+oXz1++HG0Knr9nmyy7TtPKxcV8/m65HGcKJuHZp/v7vHbxw+lpMtYUTMKzi/t7sf2dno42Bc/fs7vt9u/NpnLx1dHR74vFOFMwCc8u1QKzCi1LjlPw/D0rbpUua6e/4gZrZZ4ZHadgEp7dPDykWVa5+Ob4eDmfjzMFk/BMLjCr0BtgjlPw/D3L8vxz7YZpniR/mLdZjlMwCc92/U9efTNr1xolyThTMAnP6JpgcM/ommAMzy5V/7MKtUaOUzAJz+iaYHDP7rbbW9UavQ61Rl5TMAnP6JpgcM/ommAMz27SVLRGy2WgNfKbgkl4xgkABvcsy/Mr1RqdhVojrymYhGdXqv85C7VGjlMwCc/4gAYM7tmD6n+OQ62R4xRMwjOea4IxPOMDGjC4Z7v+Z7utXNy1RkdH40xBnBRpenrGYgaSIk03z/L9DVPlYrK/zRpnCuLkMU03z+iaQPKYpptndE2gN819mj6e0TWB5ClNH8/omkDylKaPZ3RNIHlK08EzuiaQlNN08IznmkAvZqU0PTxj0wRz03TwjK4JJJU0D/WMrgkklTQP8ixXz7QloSfhHKcgTuppHuTZ1zR9qPU/b5fLY7M1cpyCOKmneZBnPAwMTSfNypX+nvEdeiCRafb37Gq9zlRrNA+1Rl5TECcyzf6ecdKENifNgzwrbsm/qtbobag18pqCOGlKs6dndE3QdAKQafb1jK4JpGcNafbx7Fb1P69DrZHjFMSJkWYfz1jMoNNi1sczuiaQ2Gl29oyuCSR2mp09o2uCppOm8dtuntE1gcROs4iym2dF8PX+p3gBuzVynII4sdMsouzmGZsm9Ng0Lzt5RtcEEjvNxyg7eEbXBE2LWRKKsotnvD0L0jMzzcco23pG1wQSO82nKNt6xmIGvReztp7RNYHETrMcZSvP6JpAYqdZjrKVZ3xEGyR2muUow57tvtduva5c3H1/2snJOFMQJ3aalSjDntE1gSTYNZWjDHtG1wT6pBnqmso/BjyjawJJm66pg2d0TdC0mCVdopxx0oRBT5phz2632zvVGr0KtUZeUxAndpoySsszuibQm2a7rqmVZ3RNIGnfNZVHGj27Vv3Pu1Br5DgFcWKn2STAjE0Tht40V03/F/G76n9ehFojxymIEztNQwDt2ZXqf85CrZHjFMSJnaYhgPaMf3IIEjtNQwDhWZplN7X+ZzmfvzFbI8cpiBM7TVsA4dkn1f98CLVGjlMQJ3aatgDCM7om0Jtmx66pPFL1jK4JJD26pvLIjMUMhl7Mqp7l+1228tfJfpc1XsNxCuLETrONAD95RtcEkn5dU3nkJ8/omkDSr2sq//i/Z3RNIOndNWnP6JpA0rtr0p7RNYE+afbtmoRndE0gOaRrEp4Vt3K5upVLQvfyXlMQ7Qkg8RDgP894GBikZ10eBjZGdp7dbjaiNFgsAq2R3xTEiZ1mJwFmnABg0BPAv57xXBNI+j3X1DQyu07TjSoNFqHWyGsK4sROs6sAMz6gAXrTPOwDGlXPvqjS4H2oNfKagjix0+whwD8CDAD6MB9agHa4JgAAAABJRU5ErkJggg==")}.panel-wrap .order-desc .price{float:left;font-size:.64rem;padding:.128rem 0 0 .512rem;font-weight:700}.panel-wrap .order-desc .price strong{font-size:1.536rem}.panel-wrap .order-desc .price del{margin-left:.21333333rem}.panel-wrap .order-desc .received{float:left;font-size:.55466667rem;padding-left:.21333333rem}.panel-wrap .order-desc .received .priceOld{margin-top:0}.panel-wrap .order-desc .received .priceOld.marTop{margin-top:1.10933333rem}.panel-wrap .order-desc .tips{background:#ffe536;font-size:.512rem;padding:.04266667rem .256rem;border-radius:.32rem;margin:.384rem 0 .10666667rem -.10666667rem;position:relative;color:#6a2e05}.panel-wrap .order-desc .tips.appear{-webkit-animation:appear .2s ease forwards;animation:appear .2s ease forwards;-webkit-transform-origin:0 80%;transform-origin:0 80%}.panel-wrap .order-desc .tips:before{content:"";background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHBAMAAAAotXpTAAAALVBMVEUAAAD/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tb/5Tbr6C+fAAAADnRSTlMA9c6bSOnVvox1a1YcChFB6PcAAAAnSURBVAjXY2DgePfuAQMDE5j0A5N5IJLrHYg8KG6s94Bh9gUGlgAAoCwTQwpLa2gAAAAASUVORK5CYII=");width:.192rem;height:.14933333rem;background-size:100% 100%;position:absolute;bottom:.08533333rem;left:-.04266667rem}.foot-wrap{position:fixed;bottom:0;background:#fff;height:2.13333333rem;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;width:100%;box-shadow:0 -1px 3px rgba(0,0,0,.1)}.foot-wrap,.foot-wrap .m-left{display:-webkit-box;display:-ms-flexbox;display:flex}.foot-wrap .m-left{height:100%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:0 .42666667rem;background: #26bf0c;}.foot-wrap .m-right{-webkit-box-flex:1;-ms-flex:1;flex:1;height:100%;-ms-flex-item-align:center;align-self:center}.foot-wrap .foot-btn{background:#ff2121;height:100%;width:100%;color:#fff;font-size:1.3rem;font-weight:700}.foot-wrap .foot-btn.disabled{color:#ccc}.foot-wrap .m-center{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAABkCAMAAABqzkrcAAAAnFBMVEX/ISH//////Pz/MDD/JSX/0tL/9fX/8vL/2Nj/xcX/vr7/paX/lpb/kZH/ior/goL/bGz/YWH/WFj/U1P/TU3/PT3/Nzf/Jyf/+fn/9/f/7e3/3d3/zc3/urr/qqr/oKD/mZn/cnL/aWn/XFz/RET/Kir/+/v/5+f/5OT/4eH/ycn/wMD/t7f/sbH/nZ3/hob/fHz/enr/Zmb/LCxjuQIZAAAA30lEQVQ4y3XSN3LDABBD0V1mipliUM7O2b7/3dziF0L3OswANprmDB2gF8gnqIUKaAv5BLVQAWWQh9AFOkIZFIQq/4U+oRgKQpV30AmKoeBP5R1UQjvo8UHlV6iCXqHVrPIeqqAcWs8qX0I1lENJpPIlVEMLKIlUPkBf0AJKIR+gBtpDGyiGSqhXJdH9Lg10Uz2bqoAuqiBU7UxV3V8ljVTvpvqBRtXWVEeoU63wwdxUNTSoNqb6gM7QpMpMdYKuqvWsejNVA91UT6Y6QK0qCFWxqUqoV6WRaq+wb2hU/AOAHwtmZZXeKAAAAABJRU5ErkJggg==");background-size:100% 100%;background-repeat:no-repeat;height:3.13333333rem;width:.27733333rem;-webkit-transform:translateX(.02133333rem);transform:translateX(.02133333rem)}.foot-wrap .progress{border:1px solid #ffd02f;border-radius:.10666667rem;background-color:#fffcb8;width:auto;margin-right:0;height:1.2rem;margin-top:.02133333rem;text-align:center;position:relative}.foot-wrap .progress .progress-bg{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWBAMAAAA2mnEIAAAAG1BMVEX/1ED/wAD/zy//zCb/0jb/wwn/xhH/yRz/yRo98q8PAAAAcklEQVQY02NgYBIEAnEGMDAEsQ3ATHYQswkinAhkCjNAAEhYAcxyBbFDwEwmQSBbDGoGiN0AZnIIAtnCcDMYYBoFgWyYRhAbphFuhgZIuADMZBZEWF6IsJxNEG45SyBCoyJ2jY1ApiiSRhOIMEijEMQMAB0CDdue4rYpAAAAAElFTkSuQmCC");height:100%;width:0;position:absolute;z-index:0;top:0;left:0;-webkit-animation:q-process 2s linear infinite;animation:q-process 2s linear infinite}.foot-wrap .progress span{font-size:.512rem;line-height:.68266667rem;vertical-align:center;color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,.5);z-index:9;position:absolute;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.foot-wrap .progress span b{font-size:.55466667rem;font-weight:400}.foot-wrap .totop{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAq1BMVEX///8AAAD9/f3Y2NipqanS0tLY2Nju7u7n5+fOzs76+vry8vLR0dH19fXk5OTR0dGBgYH4+Pj29vbR0dHh4eHR0dGWlpbc3NzR0dF9fX2Hh4fw8PDR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dGQkJDU1NTR0dHR0dHR0dGMjIzR0dHR0dHR0dHR0dHR0dHR0dGenp5paWlwcHB1dXW8vLzR0dHR0dHR0dFmZmYzPe/EAAAAOHRSTlPmAOfn8+bs5ubt5+eG5+Zb+ufnEOY39+cO+/rn2MqmfjAGmXv45pCOOvmV4bOxa2r1/v388VcEetlu31sAAAItSURBVEjHtdfZlqIwEAbgopgYBlkERNHGBWz3Xux1eP8nm9jaLJMU0nDmv/V8JkCWKtCUScLn7eMsZiyePRyewkRTRoUjd87GBrdNBEDT5saYzd2oEV5u1k4foRLsO+vN8ibepTpHUAS5nu5qcbTQ74DMnb4IaOwyA6EmaDCXwivdhxvx9ZUaW0OEm8GhpcCB5VQsqR0rkLBlQMMY1r/YcqBxHKuK/xDPSzz3qoxdnbCE1t0CR8yHH8VnQY4XBvwwxuIbh/Sk6YmHV3zgUMrpJVPm5QSl8PSCl9WB3zIib1COvvzCWw7ljH8R6UFl6O0ZRwyhRZBFAn8MoVWGHwLP+/Tunw7os6E/1yChZ92fZNmE1MgSCMd1tk6PQ3gyKDsQ9KypxzKe4cBpOxCU1nwLDzaoYgs46mXZ75P4D7W2H2FmkhbPGEeU9mYQo8pOhTXhjOFLq6aHMTCQ4wt7b8IFkxqPKuxd7DcGU+iprcIxEjbHQt8L7cvTll+Yt8+yvQk5zrUnvTD5U42E9aDAuR5Jn0peJK+5LbDQ++xVWiTy8uy9myBhod970vKkN0aB6Y2RMGyHkSXFYUBj+jDQXKcddlyBozW2wbiOBNY2vA3mm+uhX4OJ3/JDX0upof3JwKMGTrUL3rW56HZdrtiul3v3skJk1aKg6V5KdS/itKDp2KryUftsWrh+diiZ/0OxLhI0axO6NyjdWyM5wbUp81DEuzZlgSanvh08Hmvbwb+0h0WKC66+EQAAAABJRU5ErkJggg==");background-size:100% 100%;background-repeat:no-repeat;width:1.28rem;height:1.28rem;display:block;position:absolute;right:.42666667rem;top:-1.94133333rem}.foot-wrap .totop.hide{display:none}.foot-wrap .countdown-container{color:#e92626;font-size:1rem;padding-top:.21333333rem}.foot-wrap .countdown-container span{background:#e92626;color:#fff;height:1.5rem;line-height:1.5rem;border-radius:.08533333rem;padding:0 .1533333rem;margin:0 .04266667rem;width:1.6rem;display:inline-block}.foot-wrap .countdown-container span.toend{color:#e92626;background:none;padding:0;margin:0;display:inline-block;width:auto}.order-textarea{width:10rem;line-height:1.1rem;height:1.1rem}
+
+</style>
+
+    <div id="foot-content">
+      <div class="foot-wrap" style="height: 4.13333333rem; z-index:99999999999999999999">
+
+        <div class="m-left">
+
+          <!-- <div class="progress">
+
+        <span class="spanrob">已抢39%</span>
+
+        <div class="progress-bg" style="width: 39%"></div>
+
+      </div>-->
+
+          <div class="countdown-container" id="fnTimeCountDown" data-end="2018/7/18 18:36:48">
+
+            <a href="tel:17354037308">
+              <p class="countdown" style="padding:0px 20px; color:white">电话咨询</p>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!--<div class="m-center"></div>-->
+
+        <div class="m-right">
+
+
+
+          <a href="#buy"><button id="J_BtnOrder" class="foot-btn" style="border:0;outline:none; ">马上抢！</button><a />
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!--产品主图-->
+
+    <style>
+
+      .marquee-wrapper {
+
+          height:108px;
+
+          margin-bottom:-108px;
+
+          overflow:hidden;
+
+          position:relative;
+
+          z-index:1;
+
+          top:-30px;
+
+        }
+
+        .marquee-wrapper #marqueeContainer {
+
+          position:relative;
+
+          margin:0;
+
+          padding:0;
+
+          list-style:none
+
+        }
+
+        .marquee-wrapper #marqueeContainer li {
+
+          list-style:none;
+
+          position:absolute;
+
+          left:0;
+
+          padding:5px 10px;
+
+          border-radius:15px;
+
+          opacity:1;
+
+          height:36px;
+
+          overflow:hidden;
+
+          transition:opacity .5s, top .5s;
+
+          -moz-transition:opacity .5s, top .5s;
+
+          -webkit-transition:opacity .5s, top .5s;
+
+          -o-transition:opacity .5s, top .5s
+
+        }
+
+        .marquee-wrapper #marqueeContainer li div {
+
+          display:flex;
+
+          align-items:center;
+
+          background-size:22px;
+
+          background-repeat:no-repeat;
+
+          background-position:1px;
+
+          font-size:12px;
+
+          border-radius:13px;
+
+          line-height:26px;
+
+          padding:0 10px 0 5px;
+
+        }
+
+        .marquee-wrapper #marqueeContainer li div img{
+
+          width:24px;
+
+          height:24px;
+
+          margin-right:5px;
+
+          border-radius:12px;
+
+        }
+
+        .marquee-wrapper .marquee-style-1 li>div {
+
+          background-color:black;
+
+          color:white
+
+        }
+
+        .marquee-wrapper .marquee-style-2 li>div {
+
+          background-color:rgba(0, 0, 0, .9);
+
+          color:#fff
+
+        }
+
+    </style>
+
+    <div class="banner" style=" margin-top:0px">
+
+
+
+      <!--最新购买滚动节点-->
+
+      <div id="marketingModules" style="position: relative; z-index:1;">
+
+        <div class="marquee-wrapper ">
+
+          <ul id="marqueeContainer" class="marquee-style-1"></ul>
+
+        </div>
+
+      </div>
+
+
+
+      <img src="img/0_003.jpg" style="width:100% !important">
+
+
+
+    </div>
+
+
+
+    <!--产品主图结束-->
+
+
+
+
+
+    <section class="buy" style="background:#EEE9E6">
+
+      <div class="row1">
+
+        <strong style="color:#F85959; text-shadow:none">138</strong>
+
+
+
+        <ol>
+
+          <li>
+            <p>包邮</p>￥998
+          </li>
+
+          <li>
+            <p>折扣</p>3折
+          </li>
+
+          <li>
+            <p>节省</p>￥700
+          </li>
+
+        </ol>
+
+
+
+      </div>
+
+      <script type="text/javascript">
+
+        function setCookie(name, value) {
+
+          var Days = 30;
+
+          var exp = new Date();
+
+          exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+
+          document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+
+        }
+
+
+
+        //读取cookies 
+
+        function getCookie(name) {
+
+          var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+
+
+          if (arr = document.cookie.match(reg))
+
+
+
+            return unescape(arr[2]);
+
+          else
+
+            return null;
+
+        }
+
+      </script>
+
+      <div class="row2">
+
+        <strong>热卖1740件</strong>
+
+        <div class="djs">
+
+          <div class="time-count">
+
+            <div id="remainTime_1" class="jltimer" style="color:red">
+
+
+
+
+
+              仅剩
+
+
+
+
+
+              <script type="text/javascript">
+
+                var shijian = 98;
+
+
+
+
+
+                if (getCookie("name") != null) {
+
+                  document.write(getCookie("name"));
+
+                  setCookie("name", getCookie("name") - suiji);
+
+                }
+
+                else {
+
+                  setCookie("name", shijian);
+
+                  document.write(shijian);
+
+                }
+
+              </script>
+
+
+
+
+
+              件库存,机不可失，时不再来！
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <article class="des"></article>
+
+      <a class="btn" href="#buy">立即抢购</a>
+
+    </section>
+
+
+
+
+
+
+
+    <article class="showcontent">
+
+
+
+
+
+
+
+
+
+
+
+      <img class="pic-module mo" src="img/0_005.gif" style="width:100%">
+
+
+
+      <img class="pic-module mo" src="img/0_010.jpg" style="width:100%">
+
+
+
+
+
+      <img class="pic-module mo" src="img/0_014.jpg" style="width:100%">
+
+      <img class="pic-module mo" src="img/0_008.jpg" style="width:100%">
+
+
+      <img class="pic-module mo" src="img/0_005.jpg" style="width:100%">
+
+      <img class="pic-module mo" src="img/0_004.jpg" style="width:100%">
+
+
+
+      <div class="ql-editor">
+        <p style="text-shadow:none">
+
+          <span style="font-weight:bold; font-size:20px; color:#000"><span style="font-weight:bold; color:red; ">店主有话说：</span><br>
+
+
+
+            我们的产品，全国包邮，货到满意再付款！<br>
+
+
+
+            现在下单不用钱，等签收快递时再付款给快递小哥<br>
+
+
+
+            <span style="font-weight:bold; color:yellow; background:red">任何问题均可联系我们，客服电话热线：17354037308</span><br>
+
+
+
+            注意：广告只展示一次，错过了就再也看不到我们的产品了！
+
+          </span></p>
+      </div>
+
+
+
+
+
+    </article>
+
+
+
+
+
+
+
+    <!--款式展示-->
+
+    <article class="kuanshi">
+
+
+
+    </article>
+
+    <!--款式展示结束-->
+
+
+
+    <article id="buy">
+
+      <h2>订单信息</h2>
+
+      <!--订单-->
+
+      <script src="http://novelvideo.cn/public/productjs/5cbab9cfd9701.js"></script>
+
+      <!--------订单--------->
+
+    </article>
+
+
+
+
+
+    <footer>
+
+      <p>
+        <center><img width="100%" src="img/foot.png"></center>
+      </p>
+
+      <p>
+        <center> </center>
+      </p>
+
+    </footer>
+
+  </div>
+  <!--/page-->
+
+
+
+
+
+
+
+
+
+  <!----->
+
+
+
+  <style type="text/css">
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      border: 0;
+
+    }
+
+    @-webkit-keyframes shake {
+
+      0% {
+
+        -webkit-transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      50% {
+
+        -webkit-transform: rotate(-2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      100% {
+
+        -webkit-transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+    }
+
+
+
+    @-moz-keyframes shake {
+
+      0% {
+
+        transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      50% {
+
+        transform: rotate(-2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      100% {
+
+        transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+    }
+
+
+
+    @-ms-keyframes shake {
+
+      0% {
+
+        transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      50% {
+
+        transform: rotate(-2deg) translate3d(0, 0, 0)
+      }
+
+
+
+      100% {
+
+        transform: rotate(2deg) translate3d(0, 0, 0)
+      }
+
+    }
+
+
+
+    .lottery {
+
+      width: 300px;
+
+      height: 345px;
+
+      border-radius: 15px;
+
+
+
+      position: fixed;
+
+      top: 50%;
+
+      left: 50%;
+
+      overflow: hidden;
+
+      margin-left: -150px;
+
+      margin-top: -172px;
+
+      transform-origin: 50% 100%;
+
+      -webkit-transform-origin: 50% 100%;
+
+    }
+
+    .lottery img {
+
+      width: 100%;
+
+      height: auto;
+
+    }
+
+    .lottery.shake {
+
+      animation: shake .2s infinite linear;
+
+      -webkit-animation: shake .2s infinite linear;
+
+    }
+
+    .windows {
+
+      width: 300px;
+
+      height: 345px;
+
+      position: fixed;
+
+      top: 50%;
+
+
+
+      left: 50%;
+
+      margin-left: -150px;
+
+      margin-top: -172px;
+
+      border-radius: 15px;
+
+      background-image: url(js/h_bg.jpg);
+
+      padding-top: 115px;
+
+      padding-left: 10px;
+
+      padding-right: 10px;
+
+      display: none;
+
+      z-index: 11;
+
+    }
+
+    .text {
+
+      text-align: center;
+
+      font-size: 18px;
+
+      font-family: "微软雅黑";
+
+      vertical-align: middle;
+
+      padding-top: 60px;
+
+    }
+
+    .text a {
+
+      color: #fff;
+
+    }
+  </style>
+
+
+
+
+
+
+
+  <script>
+
+    (function () {
+
+      var list_new = "'罗** 正在购买这个商品','唐** 14分钟前购买成功','刘** 5分钟前购买成功','黄** 13分钟前购买成功','夏** 正在购买这个商品','涂** 21分钟前购买成功','郭** 30分钟前购买成功','伍** 24分钟前购买成功','曹** 正在购买这个商品','缪** 12分钟前购买成功','修** 11分钟前购买成功','周** 14分钟前购买成功','李** 正在购买这个商品','潮** 8分钟前购买成功','张** 15分钟前购买成功','白** 18分钟前购买成功','罗** 正在购买这个商品','郑** 3分钟前购买成功','余** 16分钟前购买成功','何** 25分钟前购买成功'";
+
+      var list_new2 = list_new.substring(1, list_new.length - 1).split('\',\'');
+
+      var img = "'n3.jpg','n11.jpg','n23.jpg','n6.jpg','n5.jpg','n22.jpg','n17.jpg','n18.jpg','n10.jpg','n1.jpg','n12.jpg','n8.jpg','n13.jpg','n25.jpg','n9.jpg','n4.jpg','n7.jpg','n26.jpg','n2.jpg','n19.jpg'";
+
+      var img2 = img.substring(1, img.length - 1).split('\',\'');
+
+      var testFn = {
+
+        list: list_new2,
+
+        // list: ["长沙王**购买了该商品，3秒前", "天津李**购买了该商品，4秒前", "北京郭**购买了该商品，5秒前", "西宁马**购买了该商品，7秒前", "广州颜**购买了该商品，12秒前",
+
+        //   "成都冼**购买了该商品，23秒前", "无锡王**购买了该商品，34秒前", "温州马**购买了该商品，45秒前", "拉萨阿**购买了该商品，56秒前", "深圳唐**购买了该商品，59秒前"],
+
+        headLength: 20,
+
+        scrollHeight: 36,
+
+        top: 0,
+
+        totalLoop: 0,
+
+        wrapper: document.querySelector(".marquee-wrapper"),
+
+        container: document.querySelector("#marqueeContainer"),
+
+        init: function () {
+
+          this.wrapper && this.container && this.load(function () {
+
+            if (this.list && this.list.length) {
+
+              if (this.container.innerHTML = this.createHTML(!0, 0) + this.createHTML(!1, this.list.length), false) {
+
+                document.querySelector(".pic-module") || (this.wrapper.style["margin-top"] = "0px")
+
+              }
+
+              this.run()
+
+            }
+
+          }.bind(this))
+
+        },
+
+        createHTML: function (t, e) {
+
+          for (var n = "", r = 0; r < this.list.length; r++) {
+
+            var o = (r + e) * this.scrollHeight,
+
+              u = '<div><img src="moban/avatar/' + img2[r] + '" alt="" />' + this.list[r] + "</div>";
+
+            n += t ? 0 == r ? '<li style="opacity: 0; top: ' + o + 'px;">' + u + "</li>" : 1 == r ?
+
+              '<li style="opacity: 0.9; top: ' + o + 'px;">' + u + "</li>" : 2 == r ?
+
+                '<li style="opacity: 0.3; top: ' + o + 'px;">' + u + "</li>" : '<li style="top: ' + o + 'px;">' +
+
+                u + "</li>" : '<li style="top: ' + o + 'px;">' + u + "</li>"
+
+          }
+
+          return n
+
+        },
+
+        load: function (t) {
+
+          t && t();
+
+        },
+
+        run: function () {
+
+          var t = this;
+
+          window.setInterval(function () {
+
+            t.updateUI(), t.totalLoop++
+
+          }, 2000)
+
+        },
+
+        updateUI: function () {
+
+          var t = 0;
+
+          if (this.totalLoop % this.list.length == 0 && this.totalLoop > 0) for (; t < this.list.length;) this.container
+
+            .querySelector("li").style.top = (this.list.length + t) * this.scrollHeight + "px", this.container
+
+              .appendChild(this.container.querySelector("li")), t++;
+
+          var e = this.container.querySelectorAll("li");
+
+          for (t = 0; t < e.length; t++) {
+
+            var n = parseFloat(e[t].style.top);
+
+            n == this.scrollHeight ? e[t].style.opacity = 0 : n == 2 * this.scrollHeight ? e[t].style.opacity =
+
+              .9 : n == 3 * this.scrollHeight && (e[t].style.opacity = .3), e[t].style.top = n - this.scrollHeight +
+
+              "px"
+
+          }
+
+        }
+
+      }
+
+      testFn.init();
+
+    })();
+
+
+
+
+
+  </script>
+
+  <link rel="stylesheet" href="img/mobile.css">
+
+  <div class="coupon-mask style-1" onClick="huoqu()" style="display:none">
+
+    <div class="coupon-content-wrapper">
+
+      <div class="coupon-content">
+
+        <div class="coupon-list-wrapper">
+
+          <div class="coupon-wrapper coupon-style-1">
+
+            <div class="coupon-1">
+
+              <div class="left">
+
+                <div class="money">
+
+                  <span class="font-12">￥</span>20
+
+                </div>
+
+                <div class="text">
+
+                  优惠券
+
+                  <div class="font-12">
+
+                    多买多减
+
+                  </div>
+
+                  <div class="use-btn close-btn">立即使用</div>
+
+                </div>
+
+              </div>
+
+              <div class="right">
+
+                <span class="close-btn">立即使用</span>
+
+              </div>
+
+              <div class="bubble bubble-1"></div>
+              <div class="bubble bubble-2"></div>
+              <div class="bubble bubble-3"></div>
+
+              <div class="bubble bubble-4"></div>
+              <div class="bubble bubble-5"></div>
+              <div class="bubble bubble-6"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="coupon-single-use-btn">
+          <div>立即使用</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    var _hmt = _hmt || [];
+
+    (function () {
+
+      var hm = document.createElement("script");
+
+      hm.src = "https://hm.baidu.com/hm.js?2afbceef2c9ff886dc2ef56216fc6423";
+
+      var s = document.getElementsByTagName("script")[0];
+
+      s.parentNode.insertBefore(hm, s);
+
+    })();
+
+  </script>
+
+</body>
+
+</html>
