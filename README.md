@@ -1,3 +1,5 @@
+
+![setLR](/demo/images/setLR.png)
 # PHP PSR
 
 * PSR-0 已废弃，用PSR-4代替
@@ -15,4 +17,3 @@
     > vscode选择编码格式旁边的LF就好了
     > 或者全局设置换行符，file-》\n
 
-![setLR](/demo/images/setLR.png)
