@@ -27,35 +27,35 @@
 
 6 namespace声明之后必须要有一个空行，而且use声明必须放在namespace之后，必须分别使用use引入命名空间，而且use后要有空行
 
-    ```
+```
     namespace Vendor\Package;
-    
+
     use FooClass;
     use BarClass as Bar;
     use OtherVendor\OtherPackage\BazClass;
-    ```
+```
 
 7 extends和implements关键字必须和类名在同一行，类、接口和Traits定义体的起始括号应该在类名之后新起一行，结束括号也必须新起一行
 
-    ```
+```
     class ClassName extends ParentClass implements \ArrayAccess, \Countable
     {
-    
+
         // constants, properties, methods
-    
+
     }
-    ```
+```
 
 8 如果implements后面后很多类导致一行很长，可以依次将需要的类另起新行并缩进4个空格
 
-    ```
+```
     class ClassName extends ParentClass implements 
-       \ArrayAccess, 
-       \Countable,
-       \Serializable,
+        \ArrayAccess, 
+        \Countable,
+        \Serializable,
     {
-    
-       // constants, properties, methods
-    
+
+        // constants, properties, methods
+
     }
-    ```
+```
