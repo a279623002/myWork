@@ -24,9 +24,9 @@
 7 index0-6.html
 * js点击图片上传图片并预览
 
-8 index0-7.html
+8 index0-7.php
 * 创建文件，修改、获取数据
 
 ## weixinDemo
 
-### 修改页面的微信号
+### 动态修改页面的微信号
