@@ -14,4 +14,5 @@
 
     > vscode选择编码格式旁边的LF就好了
     > 或者全局设置换行符，file-》\n
-    ![setLR](https://a279623002.github.io/myWork/demo/images/setLR.png)
+
+![setLR](https://a279623002.github.io/myWork/demo/images/setLR.png)
