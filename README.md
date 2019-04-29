@@ -59,3 +59,48 @@
 
     }
 ```
+
+9 类中的每个属性和方法都要声明可见性，有public、private和protected，不能使用var关键词来声明，老版本的PHP会在私有属性前加上_，一行只能声明一个属性
+
+```
+    class ClassName extends ParentClass implements 
+        \ArrayAccess, 
+        \Countable,
+        \Serializable,
+    {
+
+        // constants, properties, methods
+        public $foo = null;
+        private $boo = true;
+    }
+```
+
+10 类中的所有方法也应该定义可见性，方法名后面不能有空格，方法体的括号位置和类定义体的括号位置一样，都要新起一行，结束括号也要新起一行。方法参数的起始圆括号之后没有空格，结束括号之前也没有空格，有多个参数是，每个参数的逗号后面加一个空格
+
+```
+    namespace Vendor\Package;
+
+    class ClassName
+    {
+        public function fooBarBaz($arg1, &$arg2, $arg3 = [])
+        {
+            // method body
+        }
+    }
+```
+> 如果参数比较多，需要换行时，可以如下：
+
+```
+    namespace Vendor\Package;
+
+    class ClassName
+    {
+        public function aVeryLongMethodName(
+            ClassTypeHint $arg1,
+            &$arg2,
+            array $arg3 = []
+        ) {
+            // method body
+        }
+    }
+```
