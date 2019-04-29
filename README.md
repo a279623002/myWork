@@ -15,3 +15,4 @@
     > vscode选择编码格式旁边的LF就好了
     > 或者全局设置换行符，file-》\n
     !['pic'](/demo/images/setLR.png)
+    !['pic']
