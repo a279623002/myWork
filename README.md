@@ -10,7 +10,7 @@
 
 > 仅包含PHP代码的文件
 
-2 PHP文件必须使用Unix风格的换行符
+2 PHP文件必须使用Unix风格的换行符，编码格式为utf-8 无bom
 
 > vscode选择编码格式旁边的LF就好了
 > 或者全局设置换行符，file-》\n
@@ -178,4 +178,32 @@
         },
         $arg3
     );
+```
+
+15 每个类都有自己的命名空间，且都在顶级命名空间下，类名必须为驼峰式（CamelCase），常量必须全部是用大写，并且使用下划线（_）分开
+
+```
+    namespace Vendor\Model;
+
+    class Foo
+    {
+        const VERSION = '1.0';
+        const DATE_APPROVED = '2012-06-01';
+    }
+```
+
+16 类的方法必须使用小写字母开头的驼峰式（camelCase）命名
+
+```
+    namespace Vendor\Model;
+
+    class Foo
+    {
+        const VERSION = '1.0';
+        const DATE_APPROVED = '2012-06-01';
+        public function myFunction()
+        {
+
+        }
+    }
 ```
