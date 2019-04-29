@@ -104,3 +104,78 @@
         }
     }
 ```
+
+11 abstract、final必须在可见性修饰符之前，static声明必须放在可见性修饰符之后
+
+```
+    namespace Vendor\Package;
+
+    abstract class ClassName
+    {
+        protected static $foo;
+
+        abstract protected function zim();
+
+        final public static function bar()
+        {
+            // method body
+        }
+    }
+```
+
+12 在调用方法和函数时，圆括号必须跟在函数名之后，函数的参数之间有一个空格
+
+```
+    bar();
+    $foo->bar($arg1);
+    Foo::bar($arg2, $arg3);
+```
+
+> 如果参数比较多，一行放不下时，如下处理
+
+```
+    $foo->bar(
+        $longArgument,
+        $longerArgument,
+        $muchLongerArgument
+    );
+```
+
+13 这些关键词后面有一对原括号，开始括号前必须有一个空格，与方法和类的定义体不同，控制结构关键词后面的起始括号应该和控制结构关键词写在同一行
+
+```
+    $gorilla = new \Animals\Gorilla;
+    $ibis = new \Animals\StrawNeckedIbis;
+
+    if ($gorilla->isWake() === true) {
+        do {
+            $gorilla->beatChest();
+        } while ($ibis->isAsleep() === true);
+        
+        $ibis->flyAway();
+    }
+```
+
+14 闭包函数在声明时，function关键词后必须有一个空格，同时use关键词前后也必须有一个空格。起始大括号不需要另起新行
+
+```
+    $closureWithArgs = function ($arg1, $arg2) {
+        // body
+    };
+
+    $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+        // body
+    };
+```
+
+> 闭包函数有多个参数时，处理方式和方法的参数一样，同样适用于将闭包作为函数或方法的参数，如下
+
+```
+    $foo->bar(
+        $arg1,
+        function ($arg2) use ($var1) {
+            // body
+        },
+        $arg3
+    );
+```
