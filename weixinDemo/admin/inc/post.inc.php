@@ -1,10 +1,5 @@
 <?php
-$str = $_POST['content'];
-if (!empty($str)) {
-    setTxt($str);
-} else {
-    exit(json_encode(array('state'=>false, 'msg'=>'失败')));
-}
+
 function setTxt($str) {
     //要创建的文件
     $TxtFileName = "../demo.txt";
@@ -24,3 +19,25 @@ function setTxt($str) {
     fclose ($TxtRes); //关闭指针
     exit(json_encode(array('state'=>true, 'msg'=>'成功')));
 }
+
+// 防止跨域调用
+$refer = $_SERVER['HTTP_REFERER'];  
+if($refer){  
+    $url = parse_url($refer);  
+    if ($url['host'] != 'xhbup.com') {  
+         exit('拒绝访问！');  
+    }else {
+        session_start();
+        $account = $_SESSION['account'];
+        if (empty($account)) {
+            exit(json_encode(array('state'=>false, 'msg'=>'未登录！')));
+        }else {
+            $str = $_POST['content'];
+            if (!empty($str)) {
+                setTxt($str);
+            } else {
+                exit(json_encode(array('state'=>false, 'msg'=>'失败')));
+            }
+        }
+    }   
+}  

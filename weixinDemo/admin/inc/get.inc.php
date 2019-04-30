@@ -12,7 +12,15 @@ function getTxt($code) {
     exit(json_encode($result));
 }
 
-
-if(isset($_GET['code'])){
-    getTxt($_GET['code']);
-}
+// 防止跨域调用
+$refer = $_SERVER['HTTP_REFERER'];  
+if($refer){  
+    $url = parse_url($refer);  
+    if ($url['host'] != 'xhbup.com') {  
+            exit('拒绝访问！');  
+    }else {
+        if(isset($_GET['code'])){
+            getTxt($_GET['code']);
+        }
+    }   
+}  
