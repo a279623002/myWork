@@ -7,62 +7,344 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
     <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
         .iqyi-cp {
             color: #818181;
             line-height: 24px;
             font-size: 14px;
-            background: #fff url(../images/iqyi2019/iqyi-cpbg.jpg) no-repeat center top;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
         }
 
         .IqyiMenu {
             height: 90px;
             border-bottom: 1px solid #dcdcdc;
         }
-        .IqyiMenu ul {
-    width: 960px;
-    margin: 0 auto;
-}
-.IqyiMenu ul li {
-    float: left;
-    width: 160px;
-    padding-top: 14px;
-    background: url(../images/iqyi2019/IqyiMenubg.jpg) no-repeat right top;
-    position: relative;
-    height: 76px;
-    text-align: center;
-}
-li {
-    list-style: none;
-}
-.IqyiMenu a {
-    color: #333;
-    font-size: 18px;
-    display: block;
-}
-a {
-    text-decoration: none;
-    outline: none;
-}
-.IqyiMenu ul li.on em, .IqyiMenu ul li:hover em {
-    display: block;
-}
 
-.IqyiMenu ul li em {
-    display: block;
-    width: 102px;
-    height: 4px;
-    background: #8fd42c;
-    border-radius: 1px;
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    margin-left: -51px;
-    display: none;
-}
-address, caption, cite, code, dfn, em, th, var, optgroup {
-    font-style: inherit;
-    font-weight: inherit;
-}
+        .IqyiMenu ul {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 160px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #da251c;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .iqyi_block img.phone {
+            display: block;
+            width: 700px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 600px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone4 {
+            display: block;
+            width: 728px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block p.phone-p {
+            width: 700px;
+            margin: 0 auto;
+            text-indent: 2em;
+            color: #818181;
+            font-size: 14px;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #da251c;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #da251c;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/weibo.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #da251c;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #da251c;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #da251c;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 26px;
+            text-indent: 0;
+            
+        }
+        .iqyi-style-2 .item-l {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            margin-right: 2%;
+            font-size: 14px;
+        }
+        .iqyi-style-2 .item-r {
+            margin-top: 10px;
+            width: 40%;
+            float: left;
+        }
     </style>
 </head>
 
@@ -71,170 +353,279 @@ address, caption, cite, code, dfn, em, th, var, optgroup {
         <div class="IqyiMenu">
             <ul>
                 <li class="li1 on">
-                    <a href="iqyi">
+                    <a href="javascript:void(0);">
                         <span class="img"></span>
                         产品介绍
                     </a>
                     <em></em>
                 </li>
                 <li class="li2">
-                    <a href="style">
+                    <a href="javascript:void(0);">
                         <span class="img"></span>
                         展现样式
                     </a>
                     <em></em>
                 </li>
                 <li class="li3">
-                    <a href="cost">
+                    <a href="javascript:void(0);">
                         <span class="img"></span>
                         投放费用
                     </a>
                     <em></em>
                 </li>
                 <li class="li4">
-                    <a href="account">
+                    <a href="javascript:void(0);">
                         <span class="img"></span>
                         开户流程
                     </a>
                     <em></em>
                 </li>
                 <li class="li5">
-                    <a href="khcase">
+                    <a href="javascript:void(0);">
                         <span class="img"></span>
                         客户案例
                     </a>
                     <em></em>
                 </li>
-                <li class="li6">
-                    <a href="help">
-                        <span class="img"></span>
-                        常见问题
-                    </a>
-                    <em></em>
-                </li>
             </ul>
         </div>
-
-        <script type="text/javascript">
-            $(".IqyiMenu .li1").addClass("on");
-        </script>
-
-        <div class="iqyi-cp-1">
-            <div class="iqyi_block">
-                <div class="tle-1">
-                    <div class="tcn">爱奇艺广告介绍<i></i></div>
-                </div>
-                <h2 class="iqyi-title">爱奇艺广告是什么？</h2>
-                <div class="text">
-                    爱奇艺是百度旗下的一个在线视频平台，在国内视频行业占有领先地位。爱奇艺影视内容丰富多元，涵盖电影、电视剧、综艺、动漫、音乐、教育、科技等多内容领域，通过众多独播和自制剧/综艺吸引了大量用户关注，日活跃用户高达1.7亿，爱奇艺用户呈现高学历、高收入、高消费人群特征明显，
-                    是您网络推广的优质选择。
-                </div>
-                <h2 class="iqyi-title">奇麟神算是什么？</h2>
-                <div class="text">
-                    奇麟神算是爱奇艺的效果推广平台，依托于爱奇艺优质内容、海量用户以及技术优势，根据不同企业主自身特点，从娱乐、资讯、社交等多领域提供“娱乐全触点营销”式的网络推广整体解决方案，满足企业主的不同的推广需求。
-                </div>
-                <div class="text" style=" padding-top: 10px;">
-                    爱奇艺广告资源位众多，有符合广告主打造品牌需求的视频播放前贴片、视频播放中的暂停图、开机大屏等品牌信息流广告位置，也具有满足效果推广需求的频道信息流图文样式广告、视频播放样式广告、播放页信息流、社交信息流等多种资源。
-                </div>
-            </div>
-        </div>
-
-        <div class="iqyi-cp-2">
-            <div class="iqyi_block">
-                <div class="tle-1">
-                    <div class="tcn">爱奇艺广告优势<i></i></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li class="li1">
-                            <div class="img"><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/1.png">
-                            </div>
-                            <div class="t">娱乐大流量</div>
-                            <div class="hr"></div>
-                            <div class="txt">日活跃用户1.7亿，月观影时长61.5亿小时， 200+头部娱乐内容掀观看热潮，领跑在线视频行业。</div>
-                        </li>
-                        <li class="li2">
-                            <div class="img"><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/2.png">
-                            </div>
-                            <div class="t">用户全覆盖</div>
-                            <div class="hr"></div>
-                            <div class="txt" style=" line-height:19px;">
-                                爱奇艺拥有电视剧、电影、综艺、动漫、母婴、教育、资讯等不同频道，涵盖不同喜好以及不同需求的人群，用户活跃度高，学历高、收入高、年轻态等特征。</div>
-                        </li>
-                        <li class="li3">
-                            <div class="img"><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/3.png">
-                            </div>
-                            <div class="t">精准强锁定</div>
-                            <div class="hr"></div>
-                            <div class="txt">AI技术+大数据精准分析用户画像，多维度精准定向锁定目标推广人群，助力实现高转化。</div>
-                        </li>
-                        <li class="li4">
-                            <div class="img"><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/4.png">
-                            </div>
-                            <div class="t">品效双赢达</div>
-                            <div class="hr"></div>
-                            <div class="txt">品牌曝光+效果转化等多元化产品矩阵灵活组合深挖用户需求，实时竞价优化效果，全面提升ROI。</div>
-                        </li>
-                    </ul>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="iqyi-cp-3">
-            <div class="iqyi_block">
-                <div class="tle-1">
-                    <div class="tcn">爱奇艺广告资源位<i></i></div>
-                </div>
-                <div class="con1">
-                    <div class="l">
-                        <img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/5.png">
-                    </div>
-                    <div class="r">
-                        <div class="t">频道信息流广告</div>
-                        <div class="txt">
-                            <span class="lt"></span><span class="rb"></span>
-                            <div class="text">
-                                频道信息流广告主要展现在爱奇艺推荐页（首页）、电影、电视剧、综艺、动漫、热播节目页、热点、地方站等多内容长视频频道及短视频频道。用户群体流量巨大，广告曝光率高。广告以原生内容的形式推送，用户接受程度高，转化效果好。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="con2">
-                    <div class="t">框内广告</div>
-                    <div class="txt">
-                        <span class="lt"></span><span class="rb"></span>
-                        <div class="text">5S前贴片，视频播放前第一序位贴片广告，时长5秒，支持安卓和IOS双端展现。15S前贴片广告展现于视频播放前贴片中，不定序位。</div>
-                        <div class="text">
-                            可跳过贴片展示于视频播放前或视频播放中，可跳过贴片视频广告播放时，播放框正下方附加展示banner广告，强势曝光。暂停广告展现于用户暂停播放视频时，暂停取决于用户行为，用户打扰度低，曝光率高。
-                        </div>
-                    </div>
-                    <div><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/7.png"></div>
-                </div>
-                <div class="con3">
-                    <div class="t">品牌展示广告</div>
-                    <div class="l">
-                        <div class="txt">
-                            <span class="lt"></span><span class="rb"></span>
-                            <div class="text">
-                                开屏广告是爱奇艺开机第一入口，强势吸引用户关注，全面展示品牌内容，提高品牌知名度。巨幕广告位于进入爱奇艺首页的顶部位置，广告位置靠前，曝光高；地方站焦点图紧密区分区域内用户，地域属性强，利于塑造品牌地方影响力。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="r">
-                        <div class="txt">
-                            <span class="lt"></span><span class="rb"></span>
-                            <div class="text">为贴合广告主大流量、高曝光的广告投放需求，爱奇艺特推出可以包天、包时段、包流量等的框内品牌广告位与频道品牌信息流广告位。</div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div><img src="http://www.ixingcan.com/Tpl/schinese/images/iqyi2019/9.png"></div>
-                </div>
-            </div>
-        </div>
-
     </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">微博粉丝通有哪些展现样式呢？<i></i></div>
+                    </div>
+                    <div class="text">奇麟神算-微博超级粉丝通为微博信息流广告，有多种灵活的投放样式。博文推广、应用推广、账号推广、视频推广等形式，可以满足各个广告主不同的推广需求。</div>
+                    <div class="text">超级粉丝通的展现位置有四个：双端主信息流、双端分组信息流、移动端热门微博流、移动端热门搜索流。系统化整合投放，自动选择最适合资源。</div>
+                </div>
+                <div class="iqyi_block">
+                    <img class="phone" src="./images/phone.jpg" alt="">
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>博文推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">微博博文推广以原生博文的形式出现在微博移动端和PC端信息流内。由文字、链接、图片组成。其中产品和服务信息可以自由组合。微博博文推广全行业适用，同一推广博文针对同一用户只展现一次，互动率高达3%。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <div class="l"><img src="./images/phone1.png"></div>
+                        <div class="r">
+                            <div class="t2">展现机制</div>
+                            <div class="list2">
+                                <ul>
+                                    <li>
+                                        <p><span></span>1、社交关系、相关性、热门程度等条件决定“粉丝通”的展现位置；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>2、用户每天看到“粉丝通”的次数和频率有限；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>3、使用“推广给目标用户的粉丝”功能后，目标用户的转发、评论、赞、关注等行为将有可能触发原生广告推广到该目标用户的粉丝；</p>
+                                    </li>
+                                    <li>
+                                        <p style="color:#3c3c3c;">博文推广的扣费方式：CPM或CPE</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>大图推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">微博大图推广采用全屏大图，多种创意形式随意选择，支持定时发布，满足多样需求，拥有参与、购买、下载、试用、预约、查看六种按钮。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone2.jpg" alt="">
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>账号推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">微博账号推广通过微博账号或粉丝头条推广快速积累活跃粉丝，一般会以“你可能感兴趣的人”来推荐账号。</div>
+                        <div style="text-indent: 2em;">PC端：信息流内第一页展示2.5个账号广告位，点击右上角按钮展示另2个账号；</div>
+                        <div style="text-indent: 2em;">移动端：微博信息流内2个账号广告位；发现页-找人1个账号广告位；发现页-找人-特别推荐3个账号广告位；</div>
+                    </div>
+                    <div class="con2">
+                        <div class="r" style="float:left; width: 100%;">
+                            <div class="t2">展现机制</div>
+                            <div class="list2">
+                                <ul>
+                                    <li>
+                                        <p><span></span>1、定向推广：支持性别、年龄、地域、兴趣等多种定向条件；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>2、推荐扩展：通过粉丝链条关系将广告推送到粉丝的好友；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>3、社交闭环：配合粉丝服务平台，关注后推送私信；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>4、多点触达：覆盖PC端和移动端的信息流内、信息流外多个广告位；</p>
+                                    </li>
+                                    <li>
+                                        <p style="color:#3c3c3c;">博文推广的扣费方式：CPM或CPE</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>视频推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">视频推广可自定义灵活按钮配合多场景推广使用，并支持多样化落地页。按钮文案可选：立即参与／购买／下载／试用／预约／查看。微博视频推广在视频右侧展现视频中和视频后以及落地页。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone3.jpg" alt="">
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>九宫格推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            九宫格推广由9张图片组成，多维展现，多图多入口提升点击率，落地页可采用自定义的H5。九宫格形式，对于电商企业来说很实用。它最大的特点就是，可以为每一张图片加标签和跳转链接。按钮文案可以自选：包括去看看、了解详情、玩游戏、立即注册、立即预定、现在收听、立即使用、立即购买等8个文案可选，应用监测支持：ad、友盟、td，个推。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone4" src="./images/phone4.jpg" alt="">
+                        <p class="phone-p">微博商业广告除了信息流广告产品（超级粉丝通）外，还有微博搜索商业产品体系。微博搜索商业产品体系包括：搜索推广、热门搜索榜、热门搜索包等。</p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>微博搜索推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">搜索推广覆盖上亿精准搜索流量，适合品牌宣传、精准营销、舆论公关、热点借势等。当搜索推广词流量不足的时候，就可以搭配热门搜索包、热门搜索榜、热门话题一起使用了。
+                            %。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <div class="l"><img src="./images/phone5.jpg"></div>
+                        <div class="r">
+                            <div class="t2">微博搜索推广有四大特点</div>
+                            <div class="list2">
+                                <ul>
+                                    <li>
+                                        <p><span></span>1、人群定向：基于关键词定向展现特定用户人群，保障广告效果影响；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>2、资源独占：关键词定向展现特定用户人群，保障广告效果影响；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>3、舆论公关：及时热点舆论观点导向；品牌危机公关和形象维护提升；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>4、原生展现：广告原生展现，用户接受度高，便于互动和传播；</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t" style="float:left;"><span>热门搜索包</span></div>
+                    <div class="clear"></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">搜索结果页：内容聚集中心，舆论聚集点与重要中转站，舆情监控和危机公关主战场。</div>
+                        <div style="text-indent: 2em;">热门搜索包：多入口高曝光搜索框，具有多入口、强曝光、 独占性等特点。</div>
+                    </div>
+                    <div class="con2">
+                        <div class="r" style="float:left;">
+                            <div class="t2">热门搜索包三大特点</div>
+                            <div class="list2">
+                                <ul>
+                                    <li>
+                                        <p><span></span>1、强曝光引导：四大一级页面搜索框引导文案，每日亿级曝光；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>2、资源独占性：热门入口资源每天只售卖一个给商业客户独享；</p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>3、品牌聚集性：落地页首屏集中展现客户重点品牌信息，高效聚集转化；</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="l" style="float:right;"><img src="./images/phone6.png"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t" style="float:left;"><span>热门搜索榜</span></div>
+                    <div class="clear"></div>
+                    <div class="text2">
+                        <div>
+                            <div class="box-l">
+                                <img src="./images/remen1.png" alt="">
+                            </div>
+                            <div class="box-r">
+                                <p>热搜榜致力于打造最实时最权威的热点排行榜，第一时间发现用户关心的内容。最新鲜、最热门、最有料是微博热门搜索榜的三大特点。热门搜索榜在PC端出现在搜索结果页右侧榜单第三位，带“荐”的标识。移动端也有。热门搜索榜投放覆盖区域是全国，不能单独选择某个区域投放，价格也较高，一般是80万起。</p>
+                                <span>第三位，带“荐”标识</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t" style="float:left;"><span>热门搜索话题</span></div>
+                    <div class="clear"></div>
+                    <div class="text2">
+                        <div>
+                            <div class="item-l" style="text-indent: 2em;">
+                                <p>微博热门搜索话题和热门搜索榜类似，热门搜索话题在PC端也是出现在搜索结果页右侧榜单第三位，带“荐”的标识。移动端也有。点开搜索结果页右侧第三位的推荐广告之后才能区分是热门话题还是热门搜索榜。热门搜索话题和热门搜索榜的区别是，热门搜索榜覆盖范围是全国，热门搜索话题可以选择某个地区投放，价格会优惠很多。</p>
+                            </div>
+                            <div class="item-r">
+                                <img src="./images/remen2.png" alt="">
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(1).click();
+        })
+    </script>
 </body>
 
 </html>
