@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #f13d33;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #f13d33;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #f13d33;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #f13d33;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/sina.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #f13d33;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #f13d33;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #f13d33;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 335px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 525px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone3 {
+            display: block;
+            width: 1006px;
+            margin: 30px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #f13d33;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 39px;
+            background: #fff url(./images/sina.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #f13d33;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #f13d33;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #f13d33;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #f13d33;
+        }
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">新浪扶翼有哪些展现样式呢？<i></i></div>
+                    </div>
+                    <div class="text">
+                        新浪扶翼广告是新浪门户效果广告，2013年9月份推出。它依托新浪双平台多终端的海量资源，通过对新浪门户网、新浪新闻客户端、手机新浪网、财经客户端、
+                        体育客户端等海量数据进行多维度挖掘，为广告主提供精准定向服务的广告平台。扶翼推广平台接入新浪全站数百资源位，覆盖核心频道，优质资源过百；
+                        您可以通过“AD-box广告创意工具”在不同的广告位实现各式各样的广告形式。新浪网有哪些扶翼广告位？新浪扶翼的广告样式是怎样的？
+                        下文将为您介绍新浪扶翼的广告位，通过下文您可以更清楚的了解到新浪扶翼的广告位信息，让您更方便投放新浪网广告。
+                    </div>
+                </div>
+                <div class="iqyi_block">
+                    <img class="phone" src="./images/phone.jpg" alt="">
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>手机新浪网广告展现形式</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>新浪扶翼推广在WAP端新浪网全网全频道覆盖：新闻、财经、体育、 娱乐、军事、汽车、 科技、视频、美图、 NBA等……</p>
+                            <p>首页信息流无限上推加载： 第5、10、15条……及无限上推加载信息流；</p>
+                            <p>各频道正文打通：展示文章正文页下方，高清图集内容页中部，全频道打通； </p>
+                            <p>
+                                手机端新浪网广告样式有三种，一是信息流样式，多样式满足各类投放需求，扣费形式是CPC竞价；二是图形样式，全频道首页顶部第一视觉触达，扣费模式是CPC/CPM竞价；三是文字链样式，原生文案影响潜在用户，按照CPC竞价；
+                            </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>新浪新闻客户端广告展现形式</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>新浪扶翼推广在APP端新浪网全网全平台覆盖：新闻APP、财经APP、体育APP。全频道覆盖：要闻、推荐、视频、 娱乐、体育、科技、 世界杯…… </p>
+                            <p>无限上推加载：首页及各频道首页的信息流第5、10、15条……无限加载；</p>
+                            <p>正文页打通：文章正文页下方及 相关推荐第1、4、8、16、20条…… 无限加载；</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone2.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">新浪扶翼广告投放价格<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        新浪扶翼广告推广价格如何？新浪扶翼广告收费模式是怎样的？新浪广告推广费用多少？新浪扶翼推广多少钱？想要投放新浪网广告的广告主都会想了解新浪网广告报价，以下介绍新浪扶翼广告投放价格，让您了解投放新浪广告的费用，希望对您投扶翼广告有所帮助。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>新浪扶翼推广广告计费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        新浪扶翼广告支持多种计费方式：CPM/CPC/OCPC，采用竞价模式进行广告展现。不同广告形式有不同的计费模式。</p>
+                                    <p class="p-margin p-color-red">PC端：</p>
+                                    <p class="p-margin">
+                                        新浪网扶翼广告的图形样式扣费形式是CPM/CPC/OCPC竞价；信息流样式扣费模式是CPC/OCPC竞价；视频样式按照CPM竞价；动态创意样式按照CPM/CPC/OCPC扣费。
+                                    </p>
+                                    <p class="p-margin p-color-red">WAP端：</p>
+                                    <p class="p-margin">
+                                        新浪扶翼信息流样式扣费形式是CPC/OCPC竞价；图形样式扣费模式是CPM/CPC/OCPC竞价；文字链样式按照CPC/OCPC竞价</p>
+                                    <p class="p-margin p-color-red">APP端：</p>
+                                    <p class="p-margin">新浪网广告新浪扶翼常规信息流样式、视频信息流样式、GIF动图信息流样式都是按照CPC/CPM或/OCPC竞价形式来扣费；</p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    1、CPM即千次曝光成本，是常见的效果KPI 指标，CPM=消耗/总曝光量*1000，和定向的设置相关性很高。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    2、CPC即点击成本，也是常见的效果KPI 指标，CPC=消耗/总点击数，点击率对CPC影响比较大。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    3、OCPC与CPC的收费标准相同，是根据您提供的转化期望成本智能出价。对接效果监测后，系统将自动优化您的广告投放，使
+                                    实际转化成本尽可能满足您的期望成本。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>新浪扶翼广告推广预付款</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p>1、推广预付款：一般5000元起。</p>
+                                    <p style="text-indent: 1.5em;">广告主购买扶翼广告推广服务，通过代理商第一次在扶翼推广账户中预存的广告费用 ，又称“推广预付款”。</p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p>2、广州天拓是新浪授权的一级代理服务商，是较早一批厂家授权的正规新浪扶翼代理商。需要开通扶翼推广账户，随时可联系我 </p>
+                                    <p style="text-indent: 1.5em;">们，天拓将为您提供一站式新浪广告推广服务。</p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">新浪扶翼广告如何投放？<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        新浪网广告是在新浪扶翼平台进行投放，需要投放新浪网广告首先要联系新浪扶翼代理商，准备相关资质资料，然后开通新浪扶翼广告账户。想了解新浪扶翼广告推广的广告主一般有以下文问题：新浪广告怎么做？新浪扶翼广告怎么投放？新浪扶翼开户流程是怎样的？新浪扶翼推广代理商找哪个等等，以下为您详细介绍新浪扶翼广告的开户流程。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>扶翼推广广告投放开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>1、拨打新浪广告全国咨询电话400-6789-668，咨询新浪扶翼广告开户相关事宜；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>2、新浪扶翼商务人员洽谈，提供企业营业执照和行业相关资质，新浪广告针对不同行业所需资质不一样；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>3、资质审核通过后，双方签单新浪扶翼推广合同；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>4、广告费用成功充值后，即可准备扶翼广告投放上线工作；
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>天拓服务优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>1、天拓是新浪厂家授权的一级代理商，是最早的一批新浪扶翼广告代理商，拥有6年新浪广告营销服务经验。天拓在扶翼广告全国业务中处于领先地位，累计服务超过10000+的客户。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>2、广州天拓为您提供广告投放、广告优化、效果监控、数据分析、投放报告等服务，同时拥有广告素材设计，视频策划等创意策划团队，为您提供全方位的扶翼推广广告投放服务。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>3、我们的广告优化师与广告主共同承担KPI考核，对曝光量或转化量等效果进行全面评估。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iqyi_block" style="margin-bottom: 50px;"><img class="phone3" src="./images/server.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(1).click();
+        })
+    </script>
+</body>
+
+</html>
