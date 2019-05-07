@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #ff8f00;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #ff8f00;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #ff8f00;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #ff8f00;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/kuaishou.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #ff8f00;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .con2 .con2-l {
+            width: 33%;
+            float: left;
+            margin-right: 5%;
+        }
+
+        .iqyi-style-2 .con2 .con2-r {
+            width: 62%;
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.con2-txt {
+            color: #ff8f00;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.contain {
+            width: 70%;
+            padding: 20px 0;
+            font-size: 16px;
+            border-top: 1px dotted #ff8f00;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #ff8f00;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #ff8f00;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 713px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 134px;
+            float: right;
+        }
+
+        .iqyi_block img.img1 {
+            display: block;
+            width: 65px;
+            margin-top: 30px;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #ff8f00;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 39px;
+            background: #fff url(./images/kuaishou.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #ff8f00;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #ff8f00;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #ff8f00;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #ff8f00;
+        }
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .iqyi-cost-2 table {
+            width: 80%;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .iqyi-cost-2 table tr:first-child {
+            background: #ff8f00;
+            color: #FFF;
+        }
+
+        .iqyi-cost-2 table tr th {
+            padding: 10px 25px;
+            border-right: 1px solid #FFF;
+        }
+
+        .iqyi-cost-2 table tr th:last-child {
+            padding: 10px 25px;
+            border: none;
+        }
+
+        .iqyi-cost-2 table tr td {
+            padding: 10px 0;
+            border: 1px solid #ff8f00;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">快手广告有哪些展现样式呢？<i></i></div>
+                    </div>
+                    <div class="text">
+                        快手是国内知名的短视频应用平台，截止2018年12月快手日活超过1.6亿，月活超过3亿。短视频是时下较火的移动产品，受网名的关注度非常高。快手广告展示于快手APP的发现页。快手信息流广告于2017年3月开始公测，经过近两年的运营，逐步开放快手平台流量和技术能力，赋予更多的商业伙伴，打造快手短视频社交营销平台。
+                    </div>
+                    <div class="text">
+                        如何在快手投放广告？快手怎么推广？快手广告展现样式有哪些？快手的广告投放位在哪里？下文将为您详细解答快手广告的展现样式，为您投放快手广告提供帮助。
+                    </div>
+                </div>
+                <div class="iqyi_block">
+                    <img class="phone" src="./images/phone.jpg" alt="">
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>快手信息流广告展现样式</span></div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>快手广告能满足哪些推广目的</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>快手对广告的应用安装、电商下单、品牌推广、销售线索收集四大商业需求,都提供了完整的商业解决方案,普惠商业合作伙伴。</p>
+                            <p>传统广告一直局限仅能用户看到广告,无法完成对广告的追踪转化,快手信息流广告商业解决方案,贯穿了广告需求、用户触达、用户转化的完整过程。</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <div class="con2-l">
+                            <img class="phone2" src="./images/phone2.png">
+                        </div>
+                        <div class="con2-r">
+                            <img class="img1" src="./images/img1.png" alt="">
+                            <p class="con2-txt">应用安装</p>
+                            <p class="contain">
+                                针对游戏、APP下载等应用安装的广告需求,快手广告落地形式为:安卓用户将直接下载安装包, IOS用户将跳转至APP Store。
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="con2-r" style="margin-left: 25%; width: 50%;">
+                            <img class="img1" src="./images/img3.png" alt="">
+                            <p class="con2-txt">电商下单</p>
+                            <p class="contain" style="width: 90%;">
+                                推广淘宝、天猫店内商品,可deeplink调起淘宝、天猫APP至宝贝页面。
+                            </p>
+                        </div>
+                        <div class="con2-l" style="width: 20%;">
+                            <img class="phone2" style="float:left;" src="./images/phone3.png">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="con2-l">
+                            <img class="phone2" src="./images/phone4.png">
+                        </div>
+                        <div class="con2-r">
+                            <img class="img1" src="./images/img4.png" alt="">
+                            <p class="con2-txt">品牌推广</p>
+                            <p class="contain">
+                                快手APP内打开指定推广网站、活动等落地页面。
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="con2-r" style="margin-left: 25%; width: 50%;">
+                            <img class="img1" src="./images/img2.png" alt="">
+                            <p class="con2-txt">销售线索收集</p>
+                            <p class="contain" style="width: 90%;">
+                                快手APP内打开快手建站落地页,帮助收集销售线索。
+                            </p>
+                        </div>
+                        <div class="con2-l" style="width: 20%;">
+                            <img class="phone2" style="float:left;" src="./images/phone5.png">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">快手信息流广告如何收费<i></i></div>
+                    </div>
+                    <div class="text">
+                        快手广告推广价格如何？快手广告收费模式是怎样的？快手广告推广费用多少？快手信息流推广多少钱？想要投放快手广告的广告主都会想了解快手广告报价，以下介绍希望对您快手广告平台投放有所帮助。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>快手推广广告计费方式</span></div>
+                    <div style="text-indent: 2em; line-height: 33px; font-size: 16px; color: #818181;">
+                        快手广告平台提供了CPM、CPC两种计费模式,提供了以曝光数、点击数、行为点击数、下载完成数(安卓下载类广告主专属)、激活数(回传激活数据的广告主专属)为优化目标的不同目标选项。
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <th>优化目标</th>
+                                <th>适用广告主类别</th>
+                                <th>投放方式</th>
+                                <th>计费标准</th>
+                            </tr>
+                            <tr>
+                                <td>曝光数</td>
+                                <td>品牌广告主</td>
+                                <td>竞价投放</td>
+                                <td>以CPM（千次曝光花费）计费：IOS端20元起，安卓端15元起</td>
+                            </tr>
+                            <tr>
+                                <td>点击数</td>
+                                <td>效果广告主</td>
+                                <td>竞价投放</td>
+                                <td>以CPC（单次点击价格）计费：IOS端0.2元起，安卓端0.1元起</td>
+                            </tr>
+                            <tr>
+                                <td>行为点击数</td>
+                                <td>效果广告主</td>
+                                <td>竞价投放</td>
+                                <td>以CPC（单次点击价格）计费</td>
+                            </tr>
+                            <tr>
+                                <td>下载完成数</td>
+                                <td>安卓下载数<br />效果广告主</td>
+                                <td>竞价投放</td>
+                                <td>以CPC（单次点击价格）计费</td>
+                            </tr>
+                            <tr>
+                                <td>激活数</td>
+                                <td>仅限给快手准确回传<br />激活数据的广告主</td>
+                                <td>竞价投放</td>
+                                <td>以CPC（单次点击价格）计费</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        以曝光数为优化目标
+                                    </p>
+                                    <p class="p-margin">
+                                        优化目标为尽量多的获取曝光数,适合品牌广告主使用。竞价投放,以CPM(千次曝光花费)计费,IOS端20元起,安卓端15元起。
+                                    </p>
+                                </h2>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        以点击数为优化目标
+                                    </p>
+                                    <p class="p-margin">
+                                        优化目标为尽量多的获取封面点击数,适合效果广告主使用。竞价投放,以CPC(单次点击价格)计费,安卓端0.1元起,IOS端0.2元起。
+                                    </p>
+                                </h2>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        以行为点击数为优化目标
+                                    </p>
+                                    <p class="p-margin">
+                                        优化目标为尽量达到预期的目标行为点击成本,适合效果广告主使用。竞价投放,以CPC(单次点击价格)计费,算法自动帮助广告主出价并优选受众人群,最终实现行为点击成本趋近于广告主设置的目标值。
+                                    </p>
+                                </h2>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        以下载完成数为优化目标(仅限安卓下载类广告主)
+                                    </p>
+                                    <p class="p-margin">
+                                        　优化目标为尽量达到预期的目标下载完成成本,适合安卓下载类效果广告主使用。竞价投放,以CPC(单次点击价格)计费,算法自动帮助广告主出价并优选受众人群,最终实现下载完成成本趋近于广告主设置的目标值。
+                                    </p>
+                                </h2>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        以激活数为优化目标(仅限给快手回传激活数据的广告主)
+                                    </p>
+                                    <p class="p-margin">
+                                        优化目标为尽量达到预期的激活成本,适合给快手准确回传激活数据的广告主使用。竞价投放,以CPC(单次点击价格)计费,算法自动帮助广告主出价并优选受众人群,最终实现激活成本趋近于广告主设置的目标值。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>快手信息流广告合作方式</span></div>
+                    <div class="list2">
+                        <div style="line-height: 33px; font-size: 16px; color: #818181;">
+                            预充值，按系统消耗实时扣费。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">快手广告如何投放？<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        短视频成为移动互联网时代传递信息的主要载体，而快手以强大的用户使用数据为基石，可以说是国民级流量短视频应用。于是，很多用户想要在快手做运营做推广，就需要投放快手信息流广告。那么，快手广告开户方式是怎样的，怎么在快手上推广，如何在快手上投放广告，快手开户的流程是什么？快手开户需要准备的东西是什么？小拓为您详细解答，希望能为您投放快手广告有所帮助！
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>快手广告投放开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        快手开户的步骤流程是什么？快手广告开户需要准备的东西是什么？
+                                    </p>
+                                </h2>
+                            </li>
+
+                            <li>
+                                <h2 class="h2">
+                                        1、快手合同模板 。请根据合同模板(《快手广告发布协议》) , 填写所需信息；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        2、开通快手推广账户 。注册快手账户及注意事项请参考《快手账户运营及广告创意指引》：开通账户。填写《快手广告账户申 
+                                        请表》并提供相应资质；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        3、快手广告投放准备 。在快手app完成视频制作/将视频上传至快手账户；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        4、快手广告上线 。投放信息在审核通过后上线：广告上线。基于投放数据进行优化；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        5、快手投放结案 。输出效果报告：投放结案制定下阶段投放计划；
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>天拓服务优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>1、天拓是快手厂家授权的一级代理商，是最早的一批快手短视频信息流广告代理商，天拓在短视频信息流广告全国业务中处于领先地位，累计服务超过100000+的客户。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>2、广州天拓为您提供广告投放、广告优化、效果监控、数据分析、投放报告等服务，同时拥有广告素材设计，视频策划团队，为您提供全方位的快手推广广告投放服务。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>3、我们的广告优化师与广告主共同承担KPI考核，对曝光量或转化量等效果进行全面评估。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iqyi_block" style="margin-bottom: 50px;"><img class="phone3" src="./images/server.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(3).click();
+        })
+    </script>
+</body>
+
+</html>
