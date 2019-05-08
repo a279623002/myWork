@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #e5154f;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #e5154f;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #e5154f;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn font {
+            color: #000;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 100px;
+            height: 4px;
+            position: absolute;
+            left: 45%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #e5154f;
+            border-radius: 2px;
+        }
+
+        .tle-1 .tcn i:last-child {
+            bottom: 2px;
+            background: #02dfd8;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/douyin.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #e5154f;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 40px;
+            width: 930px;
+            margin: 20px auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+
+        .iqyi-style-2 .con2 .con2-l {
+            width: 33%;
+            float: left;
+            margin-right: 5%;
+        }
+
+        .iqyi-style-2 .con2 .con2-r {
+            width: 62%;
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.con2-txt {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/douyin.png) no-repeat left center;
+            background-size: contain;
+            font-size: 24px;
+            margin: 40px 0 20px 0;
+        }
+
+
+        .iqyi-style-2 .con2 .con2-r p.contain {
+            width: 90%;
+            padding: 15px 0;
+            font-size: 16px;
+            position: relative;
+            text-align: justify;
+            text-justify: inter-character;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.contain i:first-child {
+            display: block;
+            width: 100px;
+            height: 4px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #e5154f;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.contain i:last-child {
+            display: block;
+            width: 100px;
+            height: 4px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #02dfd8;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.contain span {
+            display: block;
+            text-indent: 2rem;
+            margin: 10px 0;
+        }
+
+        .iqyi-style-2 .con2 .con2-r p.contain b {
+            color: #000;
+            font-weight: bolder;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #e5154f;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #e5154f;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi-style-2 p.text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+
+        .iqyi_block img.img1 {
+            display: block;
+            width: 294px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.img2 {
+            display: block;
+            width: 135px;
+            float: right;
+            margin-top: 30px;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px 0;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #e5154f;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 39px;
+            background: #fff url(./images/douyin.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #e5154f;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #e5154f;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #e5154f;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">抖音广告<font>投放有哪些展现样式？</font><i></i><i></i></div>
+                    </div>
+                    <div class="text">
+                        抖音自2016推广之日起，就以迅雷不及掩耳之势席卷了各大社交平台。抖音平台极具强社交属性，是最具潜力的短视频平台，截止2019年1月，
+                        抖音日活跃用户（DAU）已经突破2.5亿，月活跃用户（MAU）突破5亿，目前这个数据还处于不断攀升的状态。拥有一个自带流量的APP对于现今这个时代是有红利阶段的，
+                        而想要在抖音广告投放里分一杯羹，就必须抓准时机，提早行动。
+                    </div>
+                    <div class="text">
+                        抖音的广告投放位在哪里？抖音广告怎么投放？抖音广告的展现样式有哪些……下文将为您详细解答抖音广告投放的展现样式，为您投放抖音广告提供帮助。
+                    </div>
+                    <div class="text">
+                        抖音广告投放目前有5种形式：信息流广告、开屏广告、贴纸广告、定制挑战赛、达人合作。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="con2-l">
+                            <img class="img1" src="./images/phone1.png">
+                        </div>
+                        <div class="con2-r">
+                            <p class="con2-txt">抖音信息流广告</p>
+                            <p class="contain">
+                                <i></i>
+                                抖音视频信息流广告是在抖音APP内“推荐”页面内出现的广告，即用户日常“刷”的最多的页面。这种广告投放的方式适合于大部分企业。抖音通过精选优质视频，
+                                采用下滑即推荐新视频的展现方式，让用户可以持续在抖音APP内观看视频。在用户下滑观看新视频时，不定期插入“视频广告”，该广告的制作都比较好
+                                （抖音有严格的广告审核机制），不会对用户造成干扰，用户如果对该广告内容感兴趣，可以点击视频进行观看，或者点击下方“蓝条”进行进一步的操作。
+                                抖音信息流广告形式有视频、组图、大图和小图各四种。其中视频样式可支持横版视频、竖版视频。
+                                <i></i>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="con2-l" style="float:right; width: 135px;">
+                            <img class="img2" src="./images/phone2.png">
+                        </div>
+                        <div class="con2-r" style="margin-left: 10%;">
+                            <p class="con2-txt">抖音开屏广告</p>
+                            <p class="contain">
+                                <i></i>
+                                抖音开屏广告即在抖音APP启动时展现的广告，广告播放完毕后进入“推荐”页面。开屏广告的展现形式为图片或视频形式，广告主可以根据自己企业的推广目标及推广需求选择适合自己的广告形式。
+                                <span><b>抖音开屏广告具有以下几个特点：</b></span>
+                                <span>1、曝光量巨大 2、视觉效果好 3、广告费用高 4、可定向投放</span>
+                                <span><b>广告样式</b>： 静态3秒、动态4秒、视频5秒。</span>
+                                <i></i>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>抖音贴纸广告</span></div>
+                    <div class="con2" style="border: none; padding: 0; margin: 0 auto;">
+                        <p class="text">贴纸广告属于非标产品，要具体洽谈，基本售价是30万/7天起。这种形式的优势是用户体验非常好。用户主动使用，接受程度高、分享传播率高，适合大品牌强强合作。</p>
+                    </div>
+                </div>
+                <div class="iqyi_block">
+                    <div class="t"><span>定制挑战赛</span></div>
+                    <div class="con2" style="border: none; padding: 0; margin: 0 auto;">
+                        <p class="text">
+                            定制挑战赛也属于非标产品，要具体洽谈，一般要和贴纸、达人等手段组合使用，这种方式门槛比较高，不是有钱就可以做的，最后的效果很大程度上也取决于品牌自身的能量。
+                        </p>
+                    </div>
+                </div>
+                <div class="iqyi_block">
+                    <div class="t"><span>达人合作</span></div>
+                    <div class="con2" style="border: none; padding: 0; margin: 0 auto 100px auto;">
+                        <p class="text">
+                            合作流程是首先向抖音官方提出需求，抖音官方提供备选达人和相应报价，目前采用流量包形式售卖，不同粉丝量的达人划分S、A、B等级，按照广告主合作套餐，匹配相关量级达人合作。
+                            这种方式的优点是通过借力达人影响力和创意能力实现品牌营销内容快速传播，并且可以进入推荐流，在站内原生传播。这就是向微博直接开战啊，怪不得微博要封杀抖音。
+                        </p>
+                        <p class="text">
+                            以上就是抖音推广公司为大家带来的抖音广告投放的五种最常见形式，希望对大家有所帮助。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">抖音广告<font>如何收费</font><i></i><i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        抖音广告支持按CPT以及按CPM、CPC的形式计费，可根据您的投放需求进行选择，便于您以更少的成本做出更好的效果，以下为您详细介绍抖音广告的收费情况，您有相关疑问，
+                        可通过在线客服与我们联系，我们的客服人员会为您解答。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        抖音推广费用多少？抖音广告投放如何收费？抖音推广价格多少……，以下为您详细介绍抖音推广平台的收费情况。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>抖音信息流广告的收费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <p class="p-margin" style="text-indent: 2em;">
+                                        信息流广告可分为竞价与保量两种购买方式，竞价广告可在今日头条这样的平台直接投放操作，
+                                        格式分为视频、组图、大图和小图各四种，计费方式分为cpc、ocpc、cpm、ocpm可任选一种，这种广告投放的方式适合于大部分企业。
+                                    </p>
+                                    <p class="p-margin" style="text-indent: 2em;">
+                                        保量方式是需要和具体的工作人员对接的，计费方式是CPM计费，这就需要前期做好预算，需要一次性投放，费用八万起，这种方式的优点是确保了未来某段时间能够获得预期的流量。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">1、按CPC计费</p>
+                                    <p class="p-margin">
+                                        按CPC计费即按点击计费，目前抖音信息流广告的一个CPC的价格为0.2元，即用户点击了广告主投放的广告链接，
+                                        抖音广告系统会收取广告主0.2元的广告费。
+                                    </p>
+                                    <p class="p-margin">
+                                        按cpc方式的计费的优点在于广告主仅需要为用户点击了广告付费，即仅当我们的广告真实的被感兴趣的用户点击才扣费，
+                                        这样的好处在于可以大大提升我们广告费的投资转化率。因为点击了广告的人，才可能对我们的广告感兴趣，虽然点击了广告的人不一定都对广告感兴趣，
+                                        但可以肯定的是未点击广告的人一定是不感兴趣的。因此通过按cpc的方式计费，可以让我们仅为潜在有兴趣的广告用户付费，大大节省了我们的广告成本。
+                                    </p>
+                                    <p class="p-margin">
+                                        按cpc计费的方式适合广告预算相对较少，对广告转化效果要求较高的广告主，我们选择按cpc的方式计费，可以合理的把握消费预算，在有限的费用内，
+                                        尽可能的提升广告的价值，带来更好的转化效果。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">2、按CPM计费</p>
+                                    <p class="p-margin">
+                                        按cpm计费即按千次曝光计费，所谓曝光即广告视频在用户手机屏幕中出现了，不管用户是否有观看，都记为一次曝光。
+                                        目前抖音信息流广告一个CPM的价格为4元，即广告主选择按曝光收费，广告每一千次曝光展现，抖音收取广告主4元的广告费。
+                                    </p>
+                                    <p class="p-margin">
+                                        按曝光收费的一个显著的优点是其价格便宜，当我们选择了按曝光收费，不管用户是否点击了广告，抖音都按照曝光的形式扣费，
+                                        即广告展现1000次扣费4元，则每展现10次仅需4分钱，这个费用还是非常低的。在这个基础上，我们可以通过优化我们的广告视频，
+                                        提升广告的点击率，假设广告的点击率为2%，折算下来单次点击的成本才0.2元，如果我们将广告的点击率进一步提升，那么单次点击的价格可以降到更低。
+                                    </p>
+                                    <p class="p-margin">
+                                        按cpm的计费形式适合广告预算充足，对目标受众无法做精准预判的广告主，自身拥有较强的品牌影响力，有较强的广告创作能力的广告主，通过海量的曝光，
+                                        更大限度的发现潜在的消费者，挖掘更多的客户。同时，可以通过更好的文案创意，提升广告的点击率，进而节省广告成本。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>抖音开屏广告的收费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <p class="p-margin" style="text-indent: 2em;">
+                                        开屏广告分为三种形式：视频5秒、动态4秒、静态3秒，计费有两种方式CPT280万/天、CPM20万起，这种形式的优点是保证土豪能有钱花的出去，缺点是不支持任何方式定向。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">抖音广告<font>如何投放</font><i></i><i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                            抖音信息流广告是目前较火热的短视频广告投放平台，商家通过在抖音app广告位进行投放展示产品，引导客户点击购买产品从而引流获利。那您知道抖音广告投放的流程是什么吗？有些想要投放抖音广告的广告主可能还不太清楚抖音广告是如何投放操作的，现在小拓就和大家聊一聊抖音广告是如何投放的，希望可以帮到大家。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>抖音广告开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>抖音推广开户的步骤流程是什么？抖音视频广告开户需要准备的东西是什么？
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        1、拨打400-6789-668联系抖音广告客服咨询产品能否在抖音投放；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        2、与抖音推广经理洽谈广告投放的各项细节(费用、素材、效果、服务、售后等方面)；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        3、网签或上门拜访或邮寄给客户广告合同，签订合同并打款，等待广告开户；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        4、广告主提供广告素材或我司创意制作团队制作广告素材，视频拍摄团队拍摄相关视频；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                        5、抖音广告编辑投放广告，与客户进行沟通持续优化广告。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>天拓服务优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>天拓是抖音广告厂家授权的一级代理商，是最早的一批抖音短视频广告代理商，累计服务超过100000+的客户。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>广州天拓为您提供广告投放、广告优化、效果监控、数据分析、投放报告等服务，同时拥有广告素材设计，视频策划团队，为您提供全方位的抖音推广广告投放服务。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>我们的广告优化师与广告主共同承担KPI考核，对曝光量或转化量等效果进行全面评估。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iqyi_block" style="margin-bottom: 50px;"><img class="phone3" src="./images/server.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(3).click();
+        })
+    </script>
+</body>
+
+</html>
