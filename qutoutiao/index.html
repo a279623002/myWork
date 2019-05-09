@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #18ae18;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #18ae18;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #18ae18;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #18ae18;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/qutoutiao.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #18ae18;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #18ae18;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        .iqyi-style-2 .con2 .r .t3 {
+            float: left;
+            margin-left: 230px;
+            font-size: 23px;
+            margin-bottom: 30px;
+        }
+
+        .iqyi-style-2 .con2 .r .t3:nth-child(2) {
+            margin-left: 140px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #18ae18;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 601px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 712px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone3 {
+            display: block;
+            width: 135px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone4 {
+            display: block;
+            width: 1006px;
+            margin: 30px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #18ae18;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 39px;
+            background: #fff url(./images/qutoutiao.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #18ae18;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #18ae18;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #18ae18;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">趣头条广告有哪些展现样式<i></i></div>
+                    </div>
+                    <div class="text">
+                        “趣头条”作为一款新生代内容资讯APP，以娱乐生活为主体内容，通过特色运营手段，培养用户阅读习惯，
+                        致力于让用户的阅读更有价值，通过大数据算法和云计算等技术，为用户提供感兴趣、有价值的个性化内容及服务。
+                    </div>
+                    <div class="text">
+                        趣头条平台拥有稀缺的一手信息流接口，目前已对接新型资讯媒体趣头条及集团集采资源，通过流量优化为客户提供最优广告效果投放，致力于打造国内领先的信息流媒体整合投放平台。
+                    </div>
+                    <div class="text">
+                        趣头条广告怎么投放？趣头条广告展现样式有哪些？趣头条信息流广告位在哪里……下面为大家详细介绍趣头条广告投放样式。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>趣头条信息流广告</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            每次启动后依照开启后首屏及次屏的广告展示位置，上拉下翻展示12轮。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <div class="r" style="float:left; width: 100%;">
+                            <div class="t2">列表页-组图&小图&大图</div>
+                            <div class="list2">
+                                <ul>
+                                    <li>
+                                        <p><span></span>点击率：2%-15% ，不同行业不一样，组图点击率略高于小图，大图点击率高于组图； </p>
+                                    </li>
+                                    <li>
+                                        <p><span></span>大图仅出现在视频栏目页面，量级小于列表页组图和小图，点击率高于列表页组图；</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img class="phone1" src="./images/phone1.jpg">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="con2">
+                        <div class="r" style="float:left; width: 100%;">
+                            <div class="t2 t3">详情页-小图&大图</div>
+                            <div class="t2 t3">视频推荐列表/视频热点列表</div>
+                            <img class="phone2" src="./images/phone2.jpg">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>趣头条开屏广告</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            APP启动5S随机展示、可城市定向投放、可选择投放设别投放（安卓）、可选择频次控制、可选择投放下线时间。
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone3" src="./images/phone3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">趣头条广告如何收费<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        趣头条推广以强力的针对性投放广告，可设置地区、年龄、性别、时间、系统定向、网络环境等让企业的营销投放精准有效。完全实现自主投放操纵，
+                        推广方案自主灵活，可根据需求量身定制最优推广方案，多维度全方位统计报告让您投入明明白白，效果立竿见影，优化有的放矢。同时有经营丰富的客服配合全程专业服务，
+                        几千元就能开展创新营销，带来更低的单客户获取成本和更高的投资回报率，为企业营销真正做到投入少效果好。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>趣头条信息流广告有以下几个方面的优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">海量用户</p>
+                                    <p>
+                                        用户基数达2800万且在不断上升;月活跃用户达1200万且在不断上升;曰活跃用户达500万且在不断上升;日均使用：超过35分钟，人均启动次数
+                                        6.7次，人均阅读篇数20篇。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">用户年轻高端</p>
+                                    <p>
+                                        男女比例3：7，18-35岁用户占总用户的50% 。用户以主导家庭消费的女性为主。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">非一线城市且北方为主</p>
+                                    <p>
+                                        以北方地区居多，山东地区最多，其次是河北、河南、北京、山西、辽宁。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">新生媒体，潜力巨大</p>
+                                    <p>
+                                        在2017年4月10曰才开始商业化，才真正像今曰头条一样做信息流推广，他以前是百度的联盟流量。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">同行竞争小，广告成本低</p>
+                                    <p>
+                                        目前做的人比较少，能更好地抓住市场先机，以最低的广告成本开发客户，提升广告主企业知名度和形象!
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">精准定向</p>
+                                    <p>
+                                        可以精准设置时间、性别、地域、年龄、网络环境等系统属性。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>趣头条信息流广告收费模式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">信息流原生广告：文字链、小图、组图、大图</p>
+                                    <p>购买方式：CPM </p>
+                                    <p>点击率：1%-8%</p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>趣头条开屏广告收费模式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-color-red">开机画面广告</p>
+                                    <p>静态3s（可点击/不可点击） </p>
+                                    <p>静态5s （可点击/不可点击）</p>
+                                    <p>购买方式：CPM</p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="line-height: 33px;font-size: 16px;color: #818181; margin-bottom: 50px;">
+                        趣头条目前量级比较大的行业有：美容、化妆品、金融、护肤、游戏、房地产等等。这些行业客户点击率基本在8%左右，点击成本0.2元左右。趣头条渠道比较新颖，
+                        成本比较低廉，可以以最低成本开发最优质客户，有需求的广告主可致电400-6789-668！
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">趣头条广告如何开户<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        趣头条将营销重点落在那些四五线城市刚触网的用户，效果可见一斑。中国互联网的第三波人口红利是三四线城市家庭主流消费人群，也就是所谓的“小镇中年”。
+                        他们是中国最后进入移动互联网的4-5亿人口，掌握着家庭消费决策能力，没有背负一二线城市人群的高房贷压力，可支配资金和可支配时间都比一二线城市的人群高。
+                        在越来越多的平台开始用户下沉，各大品牌也逐渐将目光投向发展力更大、数量众多的三、四线人群，趣头条抓住了这样一批对产品容忍度高，有购买潜力且流量巨大的用户，
+                        这对广告主来说无疑是一个优良的机会和平台。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        那趣头条广告如何开户？趣头条的开户流程怎样呢？下面为您详细介绍。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>趣头条信息流开户</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>趣头条广告推广账户需要通过官方授权的代理商来开通；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>需要投放趣头条广告可致电400-6789-668；
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>趣头条开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>拨打400-6789-668联系趣头条广告客服咨询产品能否在趣头条平台投放；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>与趣头条推广经理洽谈广告投放的各项细节(费用、素材、效果、服务、售后等方面)；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>网签或上门拜访或邮寄给客户广告合同，签订合同并打款，等待广告开户；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>与广告主提供广告素材或我司创意制作团队制作广告素材，视频拍摄团队拍摄相关视频；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>编辑投放广告，与客户进行沟通持续优化广告。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>天拓服务优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>天拓是趣头条厂家授权的一级代理商，累计服务超过100000+的客户。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    广州天拓为您提供广告投放、广告优化、效果监控、数据分析、投放报告等服务，同时拥有广告素材设计，视频策划团队，为您提供全方位的广告投放服务。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>我们的广告优化师与广告主共同承担KPI考核，对曝光量或转化量等效果进行全面评估。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iqyi_block" style="margin-bottom: 50px;"><img class="phone4" src="./images/server.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(2).click();
+        })
+    </script>
+</body>
+
+</html>
