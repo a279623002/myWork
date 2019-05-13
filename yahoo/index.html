@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #4d11b3;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #4d11b3;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #4d11b3;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #4d11b3;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/sina.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #f1ecf9;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #4d11b3;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #4d11b3;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #4d11b3;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 544px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 609px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone3 {
+            display: block;
+            width: 146px;
+            margin: 30px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #4d11b3;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 0;
+            background: #fff url(./images/sina.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #4d11b3;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #4d11b3;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #4d11b3;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">雅虎Yahoo广告有哪些展现样式<i></i></div>
+                    </div>
+                    <div class="text">
+                        Yahoo是全球最早一批的互联网网站，业务遍及全球25个国家和地区，雅虎Yahoo原生广告是将广告植入雅虎Yahoo新闻资讯中，让用户以为是新闻内容，
+                        而非广告的一种广告形式，这种广告广告植入雅虎Yahoo新闻资讯中，让用户以为是新闻内容，而非广告的一种广告形式，这种广告的点击率高，
+                        广告体验好，用户感兴趣才会点击，因此转化效果也好。
+                    </div>
+                    <div class="text">
+                        Yahoo原生广告与国内主流的“信息流广告”的特点是一致的，雅虎Yahoo原生广告最大的特点就是广告在用户阅读的信息中，广告不会对用户阅读造成干扰，
+                        提升了用户体验，同时，雅虎Yahoo原生广告的展现也是基于用户兴趣来展现的，提升了广告投放给潜在用户的比例，可以帮助广告主在相同广告预算的条件下
+                        ，获取更多的有效信息，信息流广告就是原生广告的一种。
+                    </div>
+                    <div class="text">
+                        那雅虎广告有哪些展现样式，雅虎信息流广告的广告位有哪些，雅虎原生广告的广告展现在哪里呢？下文为您详细介绍雅虎推广广告的展现样式。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>PC端-雅虎原生广告展现样式</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>PC雅虎原生信息流广告展现在Yahoo首页还有其他频道页，例如电子信箱、汽车、新闻、名人娱乐、时尚、3C科技、运动、房地产、气象频道等。</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>移动端-雅虎原生广告展现样式</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>雅虎移动原生信息流广告展现在移动Yahoo首页还有其他频道页，例如娱乐、股市、时尚、电影、房地产频道等。</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone2.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>APP端-雅虎原生广告展现样式</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>APP端雅虎原生信息流广告展现在Yahoo新闻APP、气象APP（Android版）、信箱APP、外展联播网人气APP等。</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone3" src="./images/phone3.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">Yahoo奇摩原生广告如何收费<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        雅虎奇摩原生广告的推广费用由实际投放广告所属的行业以及参与竞争的广告主的数量决定，Yahoo奇摩广告可以设定您允许的最高出价以及单日最高投放金额，
+                        确保您花费的广告费用，在您的预算之内。具体的雅虎Yahoo广告价格策略请看下文详细介绍。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        雅虎Yahoo奇摩广告推广费用多少？雅虎信息流广告投放如何收费？Yahoo原生推广价格多少……，以下为您详细介绍雅虎信息流广告的收费情况。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>雅虎信息流广告的收费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        按CPC计费：</p>
+                                    <p class="p-margin">
+                                        CPC即有效点击扣费，Yahoo原生广告是按点击收费的，不点击不收费，即您只需要支付客户点击广告进入您的网站页的费用，没有点击则不计费。雅虎原生广告最低出价:
+                                        0.1 USD 。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        按照CPV计费：</p>
+                                    <p class="p-margin">
+                                        雅虎视频信息流广告按照CPV扣费，是一种按照实际广告显示量来计费的广告模式，即当用户访问了会员站点，广告主的广告就被展示出来，此广告就按此收费。
+                                        CPV可投放图片，图文、Flash、视频等。模式特点：CPV又叫富媒体，本形式价格低、效果丰富，满足不同广告需求。实现音频、视频广告的流畅播放效果，
+                                        并可实现互动游戏、互动调研、互动演示等多种互动广告需求。雅虎视频信息流广告最低出价: 0.01USD 。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">雅虎信息流广告如何投放<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        雅虎原生广告与Google Adwords、Bing等，是国内企业进行海外推广的几大优选渠道之一。Yahoo原生广告无痕融入内容之中 。
+                        广告主利用简单的素材，就可以生成几十种广告形式。将广告图片、文字、视频等内容，嵌入到和广告紧密相关的内容流或者信息流中。能够有效降低用户的抵触心理。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        Yahoo雅虎原生广告结合对雅虎数据、广告主数据及第三方数据的分析，让广告主接触到更精准的受众，达到无缝、更有冲击力的传播效果。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        如果你想要投放Yahoo信息流广告，可以找相应Yahoo代理商进行咨询和投放。投放Yahoo广告需要在广告账户预存广告费用，具体的广告费用需要广告主和Yahoo广告商务经理进行洽谈。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>Yahoo雅虎广告开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>拨打免费电话400-6789-668和Yahoo雅虎代理商取得联系；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>和雅虎广告商务洽谈推广渠道、推广产品以及广告费用；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>确定签约后，需要签订合同；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>签约合同以后广告主需要按照合同上的广告金额，打款；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>广告主还需提供广告开户的资质以及广告素材所需的产品详情或是推广链接，代理商会帮助广告主开通广告账户、运维广告后台账户，也会帮助广告主做好广告数据监控的工作。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(3).click();
+        })
+    </script>
+</body>
+
+</html>
