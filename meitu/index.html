@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #fa0293;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #fa0293;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #fa0293;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #fa0293;
+            border-radius: 2px;
+        }
+
+        .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text:last-child {
+            margin-bottom: 50px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #fa0293;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #fa0293;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #fa0293;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 787px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 593px;
+            margin: 30px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #fa0293;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 0;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+            background: #FFF;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #fa0293;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #fa0293;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+            padding-right: 2em;
+            text-align: justify;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #fa0293;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">美图信息流广告，美图广告有哪些广告资源<i></i></div>
+                    </div>
+                    <div class="text">
+                        美图程序化广告基于美图旗下11款流量平台，整合多种广告资源，为客户提供一站式效果广告投放平台。
+                        通过大数据等优势资源实现精准定向，并对投放效果进行实时监控及优化，有效帮助广告主提升投放效果。小拓想要跟你说说关于美图程序化购买广告的资源有哪些？
+                    </div>
+                    <div class="text">
+                        对于美图程序化购买广告而言，它的广告资源是多种多样的，有开机全屏广告，页面图标广告，照片选择页广告，保存分享页广告（2种）。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>美图广告资源位</span></div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.png">
+                        <img class="phone2" src="./images/phone2.png">
+                    </div>
+                    <div class="text">
+                        美图广告位置多样化，广告主可以随意选择广告位置以及广告创意，需要注意的是，这些广告资源都是实时竞价投放的。由于每个APP所支持的广告位都会有所不同。
+                        其中美图秀秀广告位置支持：照片选择页、保存分享页样式1、页面图标三种广告样式；美颜相机广告位置支持：照片选择页、保存分享页样式2、页面图标三种广告样式；
+                        潮自拍广告位置支持：开机全屏；美妆相机广告位置支持：保存分享页样式2、开机全屏、页面图标；海报工厂广告位置支持：保存分享页样式1、开机全屏、页面图标。
+                    </div>
+                    <div class="text">
+                        美图广告位置多样化，广告主可以随意选择广告位置以及广告创意，需要注意的是，这些广告资源都是实时竞价投放的。由于每个APP所支持的广告位都会有所不同。
+                        其中美图秀秀广告位置支持：照片选择页、保存分享页样式1、页面图标三种广告样式；美颜相机广告位置支持：照片选择页、保存分享页样式2、页面图标三种广告样式；
+                        潮自拍广告位置支持：开机全屏；美妆相机广告位置支持：保存分享页样式2、开机全屏、页面图标；海报工厂广告位置支持：保存分享页样式1、开机全屏、页面图标。
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">美图信息流广告如何收费<i></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>美图广告的优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        高流量平台聚合适合情景化营销
+                                    </p>
+                                    <p class="p-margin">
+                                        美图有数千万MAU的素颜美妆神器—美妆相机，1.1亿MAU掌上颜值管家—美颜相机，1.1亿MAU记录和分享美丽的影像社区—美颜相机，
+                                        数千万MAU晒出晒出态度潮范儿圈儿—潮自拍以及灵感创意聚集地——海报工厂。大量且优质的用户人群优势适合广告主投放曝光需求量大的产品，以及情景化营销。 
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        全平台账号打通、定向精准
+                                    </p>
+                                    <p class="p-margin">
+                                        美图ID打通全平台全方位分析用户，打造精准定向标签。如美图平台的人群属性、设备属性、兴趣属性、用户习惯、体貌特征以及用户质量。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        广告位置多样、创意选择多
+                                    </p>
+                                    <p class="p-margin">
+                                        美图平台可提供广告主丰富的广告位资源，如：开机全屏、页面图标、照片选择页、保存分享页面，并且每个APP所支持的广告有所不同。
+                                        例如：美图秀秀支持照片选择页和保存分享页面、美颜相机广告将会出现在开机全屏、页面图标以及保存分享页。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        更多非竞价广告位，满足广告主品效需求
+                                    </p>
+                                    <p class="p-margin">
+                                        除了第三点提到的竞价广告资源外，美图还有丰富的非竞价广告资源。非竞价广告资源出现在：首页背景、VR+一键购买、品牌马赛克和更多功能。
+                                    </p>
+                                    <p class="p-margin">
+                                        那投放美图秀秀广告需要多少钱？美拍广告的投放价格，资费标准是什么？美图秀秀广告怎么收费?……，以下为您详细介绍美图推广投放的收费情况。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>美图广告收费</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <p class="p-margin">
+                                        美图的计费方式有CPC、CPT、CPM三种。美图为广告主提供了多种购买方式，可以根据自身行业等情况来选择最适合自己的购买方式。
+                                    </p>
+                                    <p class="p-margin">
+                                        另外，广告的质量度越靠前，竟得成本也就会越低。如果企业的创意越优秀也会更容易得到展现。影响广告质量度主要有以下几个因素：
+                                        创意历史点击情况、落地页加载速度、创意与落地页相关性、落地页停留时间、账户综合表现、广告互动程度、广告健康程度和广告的创意水平。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">美图广告如何投放<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        美图主要有五大产品来提供广告投放，包括美图秀秀、美颜相机、美拍、潮自拍、美妆相机，这些应用使得美图成为国内美颜行业的领头羊。
+                        也同时，它将消费主力升级，通过产品矩阵，网罗住庞大的年轻女性消费群体，此群体拥有前卫的消费方式，消费欲望高，消费潜力大，在其拍照、分享的过程中，
+                        自然而然地将产品营销信息传递给更多的人，灵活沉浸，不仅是大品牌的必争之地，更是小众产品的主攻方向。也利用这些优势打造程序化营销模式，做到高曝光、场景化、内容营销与互动营销结合。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>美图广告的样式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        品效合一
+                                    </p>
+                                    <p class="p-margin">
+                                        主要是从开屏广告、页面图标、照片选择页、保存分享页来投放广告，达到高曝光，提高转化率。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        信息流
+                                    </p>
+                                    <p class="p-margin">
+                                        就是在美图浏览器，基于兴趣推荐，以组图/大图/视频样式，多频道智能匹配。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        应用分发
+                                    </p>
+                                    <p class="p-margin">
+                                        就是从系统预装、应用推荐、游戏联运、游戏首发四个方面着手。
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        深度定制
+                                    </p>
+                                    <p class="p-margin">
+                                        是通过首页背景、VR+一键购买、品牌马赛克等功能实现。
+                                    </p>
+                                    <p class="p-margin">
+                                        那美图广告如何投放，美图信息流推广如何开户，美图广告开户找谁，美图推广联系电话多少……下文为您详细解答美图广告开户问题。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>美图广告开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">
+                                        美图推广开户的步骤流程是什么？美图信息流广告开户需要准备的东西是什么？
+                                    </p>
+                                    <p class="p-margin">
+                                        1、拨打400-6789-668联系美图广告客服咨询产品能否在美图上投放；
+                                    </p>
+                                    <p class="p-margin">
+                                        2、与美图推广经理洽谈广告投放的各项细节(费用、素材、效果、服务、售后等方面)；
+                                    </p>
+                                    <p class="p-margin">
+                                        3、网签或上门拜访或邮寄给客户广告合同，签订合同并打款，等待广告开户；
+                                    </p>
+                                    <p class="p-margin">
+                                        4、广告主提供广告素材或我司创意制作团队制作广告素材，视频拍摄团队拍摄相关视频；
+                                    </p>
+                                    <p class="p-margin">
+                                        5、广告编辑并投放广告，与客户进行沟通持续优化广告。
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(3).click();
+        })
+    </script>
+</body>
+
+</html>
