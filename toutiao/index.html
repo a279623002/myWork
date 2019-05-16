@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #e62318;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #e62318;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #e62318;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #e62318;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            background: url(./images/toutiao.png) no-repeat left center;
+            background-size: 30px;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #feeceb;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            background: url(./images/flag.png) no-repeat left center;
+            height: 23px;
+            line-height: 23px;
+            color: #e62318;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #e62318;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #e62318;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 700px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 707px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone3 {
+            display: block;
+            width: 477px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.server {
+            display: block;
+            width: 1006px;
+            margin: 30px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #e62318;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 39px;
+            background: #fff url(./images/toutiao.png) no-repeat left center;
+            background-size: contain;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #e62318;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #e62318;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #e62318;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">今日头条广告有哪些展现样式<i></i></div>
+                    </div>
+                    <div class="text">
+                        今日头条广告是基于其强大的人工智能算法，充分整合今日头条、内涵段子、西瓜视频以及知名厂商及媒体资源，为广告主提供的一个优质的营销平台。主要有开屏广告、信息流广告、详情页广告三种形式。
+                    </div>
+                    <div class="text">
+                        很多广告主会选择在今日头条投放广告，这将会是作为广告主的您做的最正确的一个决定。也许，您会问，今日头条的广告有哪些形式呢？ 今日头条广告位在哪里呢？今日头条广告如何投放呢？
+                    </div>
+                    <div class="text">
+                        接下来，小拓为您详细解答今日头条的广告样式。希望为您投放头条推广提供一些帮助！
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>今日头条-开屏广告</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                什么是开屏广告，开屏广告就是每天我们首次打开今日头条时展现的广告，这里的广告可以支持静态图片，静态图片的是3s，
+                                动态图片，也就是我们平常所说的GIF格式，GIF格式最好为4s内，动态画面和静态画面都分为：可点击可链接、不可点击不可链接两种形式。
+                                当然，开屏广告也可以是视频的形式，在开屏广告的视频，时长在10s以内最佳。如果说开屏广告的推广目的是什么？其目的当然是纯展示或者落地页了。
+                            </p>
+                            <p>
+                                头条开屏广告具有强烈的视觉冲击力，瞬间捕获注意力，品牌信息充分曝光，并可以地域定向。适合需要品牌曝光或活动推广的广告主。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>今日头条-推荐频道信息流</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                就是我们常常见到的信息流推荐频道和信息流本地频道，这里的信息流广告，可以支持图片素材，
+                                图片可以是小图、大图和组图，也可以支持10min以内的视频。说起推广目的，也就是企业的落地页、应用下载、电话拨打等...
+                            </p>
+                            <p>
+                                信息流原生广告以近似内容资讯的方式，友好精准的传递品牌信息，可多维度定向投放：性别、年龄、兴趣、职业、作息时间、地域、天气、关键词定向等。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone2.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>今日头条-详情页广告</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                什么是详情页广告，详情页广告是位于版权文章下方，相关阅读上方的广告，这里可以支持的广告形式和前面两种一样，可以支持大图、小图、组图、视频。至于推广目的的话，最终目的还是落地页以及应用下载。
+                            </p>
+                            <p>
+                                详情页广告全面覆盖用户关注，借势关联内容强调品牌传播理念。详情页广告可以支持关键词定向（基于文章语义提取的文章特征词定向）、文章来源定向（对某个头条号文章定向投放）、人群定向。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone3" src="./images/phone3.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">今日头条广告如何收费<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        今日头条广告的定位非常准确，可以根据广告主的具体需求，分时分段分地区惊醒推广，锁定目标客户，展现更为精准的推广信息。平台通过定向技术，精准的匹配用户互联网的行为属性以及广告的展示环境，展现出企业最相关的广告。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        那今日头条广告如何收费？今日头条信息流广告怎么收费？今日广告费用是多少。下面为大家详细解答今日头条广告的收费情况，希望为大家投放今日广告推广提供一些帮助。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>今日头条广告付费有三种形式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">CPM（全称： cost per mille）： 千人展示成本</p>
+                                    <p class="p-margin">即广告被展示1000次所需要的费用。  CPM（千次曝光）：4元/千次曝光，不同广告位置投放不同广告样式，CPM的起步价会不同；
+                                    </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">CPC（全称：cost per click）： 单次点击成本</p>
+                                    <p class="p-margin">即广告被点击一次所需要的费用。  CPC（点击）：0.2元/点击，不同广告位置投放不同广告样式，CPM的起步价会不同；</p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">OCPC（全称：Optimized Cost per Click）：目标转化成本</p>
+                                    <p class="p-margin">
+                                        适合希望获取大量转化效果数据，且单月至少投入5万元以上广告预算的客户。根据不同行业、产品，实际预算可能会高于5万。基础原理：
+                                        通过先投入一笔实验性的预算，看看符合什么特性的用户看到广告后更容易转化成咨询、留言、下载等。然后向更多的符合这个特性的用户投放广告，
+                                        而从获得数量更多、价格更低的转化。前期投入的实验性预算不能过少！否则无法获得足够多样本数据。样本数据至少要在240个以上。
+                                    </p>
+                                    <p class="p-margin">
+                                        想了解更多今日头条广告方面的产品知识和运营技巧或是广告怎么开户，联系广州天拓400-6789-668！
+                                    </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">今日头条广告如何投放<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        今日头条是基于用户兴趣推荐内容的资讯阅读平台，拥有4亿用户，其信息流广告将广告融入内容中，使得广告不对用户产生干扰，用户体验好。基于用户兴趣的内容推荐，使得广告投放精准，转化率高。灵活的计费方式，可以尽可能的节省成本。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        今日头条广告是基于其强大的人工智能算法，充分整合今日头条、内涵段子、西瓜视频以及知名厂商及媒体资源，为广告主提供的一个优质的营销平台。主要有开屏广告、信息流广告、详情页广告三种形式。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        开屏广告：应用开启时加载，展示固定时间（静态3秒、动态4秒、视频5秒），展示完毕后自动关闭并进入应用主页面，按CPM计费。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        信息流广告：在今日头条的资讯信息流中依托人工智能实现的广告推荐形式。
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        详情页广告：展示在文章详情页的一种广告形式，在版权文章下方，相关阅读上方
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        今日头条广告如何开户？今日头条广告开户流程怎样呢？今日头条广告如何投放？下面为大家详细解答，希望为大家投放头条广告提供一些帮助。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>今日头条广告开户投放流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>拨打免费电话400-6789-668和今日头条广告服务商取得联系；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>和今日头条广告商务人员洽谈推广渠道、推广产品以及广告费用；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>确定签约后，需要签订合同；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>签约合同以后广告主需要按照合同上的广告金额打款；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>广告主还需提供广告开户的资质以及广告素材所需的产品详情或是推广链接，代理商会帮助广告主开通广告账户、运维广告后台账户，也会帮助广告主做好广告数据监控的工作。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>天拓服务优势</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>广州天拓为您提供广告投放、广告优化、效果监控、数据分析、投放报告等服务，同时拥有广告素材设计，视频策划团队，为您提供全方位的头条推广投放服务。
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>我们的广告优化师与广告主共同承担KPI考核，对曝光量或转化量等效果进行全面评估。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iqyi_block" style="margin-bottom: 50px;"><img class="server" src="./images/server.png"
+                        alt=""></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(1).click();
+        })
+    </script>
+</body>
+
+</html>
