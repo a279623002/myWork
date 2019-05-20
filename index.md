@@ -31,6 +31,9 @@
 > 命名空间及使用
 > 类与作用域(public, private, protected)
 
+10 index0-9.html
+> ascii图
+
 ## weixinDemo
 
 > 动态修改页面的微信号
