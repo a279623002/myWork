@@ -57,27 +57,6 @@
 
         }
     </script>
-    <!--  返回键 -->
-    <script type="text/javascript">
-        $(function () {
-            if (window.history && window.history.pushState) {
-                $(window).on('popstate', function () {
-                    var hashLocation = location.hash;
-                    var hashSplit = hashLocation.split("#!/");
-                    var hashName = hashSplit[1];
-                    //  alert("aaa")
-                    if (hashName !== '') {
-                        var hash = window.location.hash;
-                        if (hash === '') {
-                            console.log('後退按鈕點擊');
-                            $("#myModal").show();
-                        }
-                    }
-                });
-                window.history.pushState('forward', null, './index.html');
-            }
-        })
-    </script>
 </body>
 
 </html>

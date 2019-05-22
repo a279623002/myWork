@@ -207,3 +207,52 @@
         }
     }
 ```
+
+# linux svn
+
+1 防火墙3690端口开放
+
+2 查看svn是否安装
+
+> svn --version
+
+3 创建版本库
+
+> svnadmin create /www/wwwroot/demo
+
+4 配置文件（/demo/conf）
+
+> authz
+```
+[/]
+username = rd
+```
+> passwd
+```
+username = password
+```
+> svnserve.conf（取消以下注释）
+```
+anon-access = read
+auth-access = write
+password-db = passwd
+authz-db = authz
+
+5 启动(多库模式)
+
+> svnserve -d -r /www/wwwroot --listen-port 3690
+
+6 服务被占用情况
+
+* 查看服务id
+> ps -ef|grep svnserve
+
+* kill 进程
+> kill -9 id
+
+* 重复5操作
+
+7 svn checkout
+
+>svn checkout svn地址
+![setLR](/demo/images/svn.png)
