@@ -237,6 +237,7 @@ anon-access = read
 auth-access = write
 password-db = passwd
 authz-db = authz
+```
 
 5 启动(多库模式)
 
