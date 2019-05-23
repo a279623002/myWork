@@ -215,6 +215,7 @@
 2 查看svn是否安装（安装命令）
 
 > svn --version
+
 > yum install subversion
 
 3 创建版本库
