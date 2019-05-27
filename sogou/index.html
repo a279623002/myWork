@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px '微软雅黑', Arial;
+            color: #606060;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var,
+        optgroup {
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #606060;
+        }
+
+        a:hover {
+            color: #ed6d09;
+        }
+
+        .iqyi-cp {
+            color: #818181;
+            line-height: 24px;
+            font-size: 14px;
+            /* background: #fff url(./images/iqyi-cpbg.jpg) no-repeat center top; */
+        }
+
+        .IqyiMenu {
+            height: 90px;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        .IqyiMenu ul {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .IqyiMenu ul li {
+            float: left;
+            width: 190px;
+            padding-top: 14px;
+            background: url(./images/IqyiMenubg.jpg) no-repeat right top;
+            position: relative;
+            height: 76px;
+            text-align: center;
+        }
+
+        .IqyiMenu a {
+            color: #333;
+            font-size: 18px;
+            display: block;
+        }
+
+
+        .IqyiMenu ul li.on em,
+        .IqyiMenu ul li:hover em {
+            display: block;
+        }
+
+        .IqyiMenu ul li em {
+            display: block;
+            width: 102px;
+            height: 4px;
+            background: #ed6d09;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            margin-left: -51px;
+            display: none;
+        }
+
+
+        .IqyiMenu ul li.li1 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu1.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li2 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu2.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li3 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu3.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li4 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu4.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        .IqyiMenu ul li.li5 .img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: url(./images/IqyiMenu5.png) no-repeat center top;
+            margin: 0 auto 8px;
+        }
+
+        main .item {
+            display: none;
+        }
+
+        .iqyi_block {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .tle-1 {
+            text-align: center;
+            padding: 50px 0 20px;
+        }
+
+        .tle-1 .tcn {
+            height: 45px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #ed6d09;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .tle-1 .tcn i {
+            display: block;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -15px;
+            background: #ed6d09;
+            border-radius: 2px;
+        }
+
+        .iqyi-style-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        .iqyi-style-2 .t {
+            text-align: center;
+        }
+
+        .iqyi-style-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 39px;
+            font-size: 23px;
+            margin: 30px 0;
+        }
+
+        .iqyi-style-2 .text2 {
+            position: relative;
+            line-height: 25px;
+            color: #818181;
+            padding: 11px;
+            background: #fdf1e6;
+            margin-bottom: 20px;
+        }
+
+        .iqyi-style-2 .t2 {
+            font-weight: bold;
+            padding: 0 0 0 27px;
+            height: 23px;
+            line-height: 23px;
+            color: #ed6d09;
+            font-size: 23px;
+            text-indent: 0;
+        }
+
+        .iqyi-style-2 .con2 {
+            border-bottom: 1px dashed #bfbfbf;
+            padding-bottom: 20px;
+            width: 930px;
+            margin: 20px auto 0 auto;
+        }
+
+        .iqyi-style-2 .l {
+            float: left;
+        }
+
+        .iqyi-style-2 .con2 .r {
+            width: 452px;
+            padding-left: 12px;
+        }
+
+        .iqyi-style-2 .r {
+            float: right;
+        }
+
+        .iqyi-style-2 .list2 {
+            padding-left: 12px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .iqyi-style-2 .list2 p span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #ed6d09;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .iqyi-style-2 .list2 p {
+            line-height: 24px;
+            color: #818181;
+            padding: 4px 0;
+            position: relative;
+            font-size: 13.5px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .iqyi-style-2 .con2 .r .t2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .iqyi-style-2 .box-l {
+            width: 48%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .iqyi-style-2 .box-r {
+            width: 50%;
+            float: left;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .iqyi-style-2 .box-r span {
+            color: #ed6d09;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 36px;
+            text-indent: 0;
+
+        }
+
+        .iqyi_block img.phone1 {
+            display: block;
+            width: 593px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone2 {
+            display: block;
+            width: 768px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone3 {
+            display: block;
+            width: 864px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone4 {
+            display: block;
+            width: 640px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.phone5 {
+            display: block;
+            width: 523px;
+            margin: 30px auto;
+        }
+
+        .iqyi_block img.server {
+            display: block;
+            width: 789px;
+            margin: 50px auto;
+        }
+
+        .iqyi-cost-1 .text {
+            line-height: 33px;
+            font-size: 16px;
+            text-indent: 2em;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 {
+            padding: 30px 0 10px;
+            color: #818181;
+        }
+
+        .iqyi-cost-2 .t {
+            height: 1px;
+            background: #ed6d09;
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .iqyi-cost-2 .t span {
+            display: inline-block;
+            font-weight: bold;
+            color: #3c3c3c;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 8px 0 19px;
+            background: #FFF;
+            font-size: 23px;
+            position: absolute;
+            left: 0;
+            top: -12px;
+        }
+
+        .iqyi-cost-2 .list2 {
+            padding: 0 0 20px 30px;
+        }
+
+        .iqyi-cost-2 .list2 .h2 {
+            font-size: 16px;
+            position: relative;
+            line-height: 26px;
+            margin: 13px 0;
+            font-weight: normal;
+        }
+
+        .iqyi-cost-2 .list2 .h2 span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #ed6d09;
+            border-radius: 4px;
+            position: absolute;
+            left: -12px;
+            top: 11px;
+        }
+
+        .p-color-red {
+            color: #ed6d09;
+            font-weight: bold;
+        }
+
+        .p-margin {
+            margin-bottom: 10px;
+        }
+
+        .p-margin:last-child {
+            margin-bottom: 30px;
+        }
+
+        .news {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .newslist {
+            margin: 40px 0;
+        }
+
+        .newslist li {
+            margin-bottom: 38px;
+            box-shadow: 0px 6px 5px -1px #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .newslist .left {
+            float: left;
+            width: 268px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .newslist .left a {
+            display: block;
+            width: 268px;
+            height: 170px;
+        }
+
+        .newslist .left img {
+            width: 100%;
+            min-height: 170px;
+        }
+
+        .newslist .right {
+            float: right;
+            width: 650px;
+            padding: 31px 0 0 42px;
+            height: 135px;
+            border-bottom: 4px solid #ed6d09;
+        }
+
+        .newslist .tle {
+            font-size: 23px;
+            font-weight: bold;
+            color: #333;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .newslist .des {
+            padding: 22px 0 35px;
+            color: #5f5d5b;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .con-item {
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .con-item img {
+            display: block;
+            float: left;
+            margin: 20px;
+        }
+
+        .con-item .con-item-right {
+            display: block;
+            width: 50%;
+            float: left;
+            margin: 40px auto 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iqyi-cp">
+        <div class="IqyiMenu">
+            <ul>
+                <li class="li1 on">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        产品介绍
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li2">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        展现样式
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li3">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        投放费用
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li4">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        开户流程
+                    </a>
+                    <em></em>
+                </li>
+                <li class="li5">
+                    <a href="javascript:void(0);">
+                        <span class="img"></span>
+                        客户案例
+                    </a>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="item">1</div>
+        <div class="item">
+            <div class="iqyi-style-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">搜狗广告有哪些展现样式<i></i></div>
+                    </div>
+                    <div class="text">
+                        搜狗推广有哪些广告样式？搜狗信息流广告样式有哪些？搜狗移动搜索有哪些新的广告样式？下文为您详细解答，希望为您投放搜狗广告提供更多帮助！
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>PC端-搜狗搜索推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>搜狗PC搜索推广是当网民在PC端通过搜狗输入法、QQ聊天、QQ浏览器、搜狗浏览器、知乎、腾讯网、搜狐网等多种渠道进行关键词搜索时，根据关键词上下文分析，将精准匹配的企业推广结果展示出来的推广方式
+                                。</p>
+                            <p class="p-color-red">搜狗PC搜索广告优势：</p>
+                            <p>1、首页前排展示 2、 内容精准呈现 3、按效果付费 4、支持多维设置 5、更高性价比 6、全新样式升级 </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <div class="con-item">
+                            <img src="./images/img1.jpg" alt="">
+                            <div class="con-item-right">
+                                <p class="p-color-red">皇冠样式：</p>
+                                <p>图文结合，更高商业价值，与文字样式相比，点击率平均提升11%</p>
+                            </div>
+                        </div>
+                        <div class="con-item">
+                            <img src="./images/img2.jpg" alt="">
+                            <div class="con-item-right">
+                                <p class="p-color-red">列表样式：</p>
+                                <p>清信息详尽展示，一目了然，为各平台量身定制</p>
+                            </div>
+                        </div>
+                        <div class="con-item">
+                            <img src="./images/img3.jpg" alt="">
+                            <div class="con-item-right">
+                                <p class="p-color-red">旅游样式：</p>
+                                <p>清晰展示其商品或服务的结构、分类及对应的内容，点击率平均提升11%，
+                                    注：目前适用于旅游、电商行业。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>移动端-搜狗无线搜索推广</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                当网民使用手机等移动设备，通过QQ手机浏览器、QQ聊天、搜狗手机输入法、搜狗手机浏览器、手机腾讯网、手机搜狐网、wap搜狗等入口进行关键词搜索时，
+                                企业推广信息将以图片、文字、链接等形式免费展现，并按点击计费的一种搜索推广形式。截止至2018年Q3季度，搜狗移动搜索流量市场份额达18.4%，位居中国第二。
+                            </p>
+                            <p class="p-color-red">搜狗无线搜索广告优势：</p>
+                            <p>1、入口多，流量大 2、随时随地推广 3、多样化丰富样式 </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone1" src="./images/phone1.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>搜狗信息流</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                搜狗信息流推广是在搜狗搜索、搜狗离枯蓝旗、搜狗输入法、今日十大等搜狗核心APP的咨询内容中，以图文样式穿插展示的原生广告，覆盖千万计用户。
+                            </p>
+                            <p class="p-color-red">搜狗信息流广告优势：</p>
+                            <p>1、汇聚搜狗核心APP，多场景覆盖，触达更多用户 2、基于搜狗大数据技术，能构建完整用户画像 3、投放系统提供多维度定向方式，帮助广告主精准定向目标用户；</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone2" src="./images/phone2.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>品牌专区</span></div>
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                品牌专区：品牌定制权威展现收口。
+                            </p>
+                            <p class="p-color-red">品牌专区四大特点：</p>
+                            <p>1、覆盖首屏60%以上页面 2、用户搜索第一入口 3、打造强势品牌形象 4、CTR高达70%-110%</p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone3" src="./images/phone3.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2" style="margin-top: 38px;">
+                <div class="iqyi_block">
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                时效品专：活动词锁定独占流量 。
+                            </p>
+                            <p class="p-color-red">时效品专两大特点</p>
+                            <p>1、放大活动词效应 2、有效减弱其他网站分流 </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone4" src="./images/phone4.png">
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-style-2" style="margin-top: 38px;">
+                <div class="iqyi_block">
+                    <div class="text2">
+                        <div style="text-indent: 2em;">
+                            <p>
+                                微信品专：独家资源打通社交营销。
+                            </p>
+                            <p class="p-color-red">微信品专三大特点：</p>
+                            <p>打通社交营销 · 微信数据实时接入，企业动态实时更新 · 单击观看动画演示 </p>
+                        </div>
+                    </div>
+                    <div class="con2">
+                        <img class="phone5" src="./images/phone5.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">搜狗广告如何收费<i></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>为什么要选择搜狗推广？</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">中国第一大中文输入法</p>
+                                    <p class="p-margin">搜狗输入法PC端和移动端都是国内排名第一的中文输入软件； 搜狗手机输入法市场份额为70%，日活跃用户达4.05亿。 </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">第二大搜索引擎</p>
+                                    <p class="p-margin">搜狗移动搜索流量市场份额为18.4%，基于移动搜索量，搜狗搜索是中国第二大搜索引擎。 </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">中国第四大互联网公司</p>
+                                    <p class="p-margin">搜狗是中国月活跃用户数排名第四的互联网公司（数据来源：艾瑞MUT-V3.0&艾瑞IUT 2018.9月） </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">与26家手机品牌达成深度合作</p>
+                                    <p class="p-margin">
+                                        搜狗与vivo、小米、金立、oppo、联想等26家手机厂商达成了深度合作，占主流智能手机厂商的95%以上，每天3亿手机，默认搜狗搜索。 </p>
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">搜狗搜索拥有QQ及谷歌浏览器等八大入口，更独享微信、知乎资源</p>
+                                    <p class="p-margin">
+                                        搜狗搜索不仅拥有搜狗输入法，QQ浏览器，谷歌浏览器、Safari浏览器、搜狗浏览器、搜狗搜索、腾讯网、搜狐网8大入口，更有微信、知乎独家资源支持，搜狗搜索流量持续增长。
+                                    </p>
+                                    <p class="p-margin">那搜狗推广费用多少？搜狗广告如何收费？搜狗搜索广告价格多少……，以下为您详细介绍搜狗推广平台的收费情况。 </p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>搜狗搜索广告收费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">搜狗搜索推广均采用免费展示，点击付费（CPC）方式，性价比高！</p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>搜狗信息流广告收费方式</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>
+                                    <p class="p-margin p-color-red">CPC或CPM</p>
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="iqyi-cost-1">
+                <div class="iqyi_block">
+                    <div class="tle-1">
+                        <div class="tcn">搜狗广告如何投放<i></i></div>
+                    </div>
+                    <div class="text" style="text-indent: 2em;">
+                        搜狗拥有搜狗输入法、QQ聊天、QQ浏览器、搜狗浏览器、知乎、腾讯网、搜狐网等众多入口，覆盖95%以上的中国网民。可分时段、分地域投放，精细控制投放范围；
+                        可关键词定向分析，有针对性的锁定目标用户；量身订制关键词，智能分组，创意推荐，合理出价及时实施账户诊断，自动定制优化方案；免费展示，
+                        仅为潜在用户点击计费起价远低于其他同类产品，为客户节省每一分钱。
+                    </div>
+                </div>
+            </div>
+            <div class="iqyi-cost-2">
+                <div class="iqyi_block">
+                    <div class="t"><span>搜狗广告开户流程</span></div>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <h2 class="h2">
+                                    <span></span>搜狗推广开户的步骤流程是什么？搜狗广告开户需要准备的东西是什么？
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    1、拨打400-6789-668联系搜狗广告客服咨询产品能否在搜狗上投放；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    2、与搜狗推广经理洽谈广告投放的各项细节(费用、素材、效果、服务、售后等方面)；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    3、网签或上门拜访或邮寄给客户广告合同，签订合同并打款，等待广告开户；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    4、广告主提供广告素材或我司创意制作团队制作广告素材，视频拍摄团队拍摄相关视频；
+                                </h2>
+                            </li>
+                            <li>
+                                <h2 class="h2">
+                                    5、广告编辑并投放广告，与客户进行沟通持续优化广告。
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="t"><span>搜狗广告开户流程</span></div>
+                    <div class="iqyi_block" style="margin-bottom: 50px;"><img class="server" src="./images/server.png"
+                            alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="news">
+                <div class="newslist">
+                    <ul class="ul">
+                        <li>
+                            <div class="left"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                    data-url="http://www.ixingcan.com/article-207.html"
+                                    title="中小电商发愁流量难抢？“奇麟神算”助力“"><img src="./images/newDemo.jpg"></a></div>
+                            <div class="right">
+                                <div class="tle"><a href="http://www.ixingcan.com/article-207.html" data-source=""
+                                        data-url="http://www.ixingcan.com/article-207.html"
+                                        title="中小电商发愁流量难抢？“奇麟神算”助力“">中小电商发愁流量难抢？“奇麟神算”助力“</a></div>
+                                <div class="des"></div>
+                                <div class="date">2019-02-22</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./images/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.iqyi-cp li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                $('main .item').eq($(this).index()).show().siblings().hide();
+            })
+            $('.iqyi-cp li').eq(3).click();
+        })
+    </script>
+</body>
+
+</html>
