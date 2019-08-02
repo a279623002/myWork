@@ -72,6 +72,7 @@ nav a.active {
     width: 100%;
     background: #FFF;
     padding-bottom: 1rem;
+    display: none;
 }
 
 .box .item {
