@@ -29,6 +29,23 @@
             <div class="col">目录</div>
         </div>
         <div class="content">不推销让顾客源源不断主动上门？</div>
+        <div class="cate">
+            <div class="item">
+                <img src="./images/img5.png" alt="">
+                <div class="cate-content">
+                    <dt>1: 痛点调研：引爆你公司利润的第一公理</dt>
+                    <dd>2019年08月01日<span>8695人已学习</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img5.png" alt="">
+                <div class="cate-content">
+                    <dt>1: 痛点调研：引爆你公司利润的第一公理</dt>
+                    <dd>2019年08月01日<span>8695人已学习</span></dd>
+                </div>
+            </div>
+            <p>没有了</p>
+        </div>
     </div>
     <div class="box">
         <h4>推荐课程<span>更多 &gt;</span></h4>
@@ -86,6 +103,26 @@
         <a href="" class="go">点击进入课程</a>
     </div>
     <script src="./js/font.js"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.nav .row .col').on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                switch ($(this).index()) {
+                    case 1:
+                        $('.nav .cate').show();
+                        $('.nav .content').hide();
+                        break;
+
+                    default:
+                        $('.nav .cate').hide();
+                        $('.nav .content').show();
+                        break;
+                }
+            });
+            $('.nav .row .col').eq(0).click();
+        })
+    </script>
 </body>
 
 </html>

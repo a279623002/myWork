@@ -87,6 +87,53 @@
 .nav .content {
     padding: 1.5rem .5rem;
     font-size: .8rem;
+    display: none;
+}
+
+.nav .cate {
+    display: none;
+}
+
+.nav .cate .item {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nav .cate .item img {
+    width: 28%;
+    display: inline-block;
+    float: left;
+}
+
+.nav .cate .item .cate-content {
+    float: right;
+    width: 67%;
+}
+
+.nav .cate .item .cate-content dt {
+    font-size: .75rem;
+}
+
+.nav .cate .item .cate-content dd {
+    font-size: .7rem;
+    color: #808080;
+    margin-top: 1rem;
+}
+
+.nav .cate .item .cate-content dd span {
+    float: right;
+    font-size: .7rem;
+    color: #808080;
+}
+
+.nav .cate p {
+    font-size: .8rem;
+    color: #808080;
+    text-align: center;
+    padding: .8rem 0;
 }
 
 .box {
