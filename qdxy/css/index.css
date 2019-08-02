@@ -1,0 +1,209 @@
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    background: #FFF;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.box h2 {
+    text-align: center;
+    position: relative;
+    margin: .5rem auto;
+}
+
+.box h2 i {
+    display: inline-block;
+    width: 3rem;
+    height: 1.8rem;
+    background: url(../images/live.png) no-repeat center center;
+    background-size: contain;
+    position: relative;
+    top: .5rem;
+    margin-left: .5rem;
+}
+
+.box .course {
+    width: 100%;
+    text-align: center;
+    margin: .8rem auto;
+    position: relative;
+    background: #FFF;
+}
+
+.box .course .course-img {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.box .course .course-img img {
+    width: 100%;
+    display: block;
+}
+
+.box .course .course-state {
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    top: 0;
+    right: 1rem;
+    z-index: 999;
+}
+
+.box .course .course-living {
+    background: url(../images/living.png) no-repeat center center;
+    background-size: contain;
+}
+
+.box .course .course-unlive {
+    background: url(../images/unlive.png) no-repeat center center;
+    background-size: contain;
+}
+
+.box .course .course-img .mask {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    border-radius: .5rem;
+}
+
+.box h3 {
+    text-align: left;
+    text-indent: .5rem;
+    background: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: .5rem auto;
+    padding: .5rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.box h3 span {
+    display: inline-block;
+    float: right;
+    margin-right: .5rem;
+    color: #808080;
+    font-size: .8rem;
+    font-weight: normal;
+}
+
+.box .item {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.box .item img {
+    width: 35%;
+    display: inline-block;
+    float: left;
+}
+
+.box .item .content {
+    float: right;
+    width: 60%;
+}
+
+.box .item .content dt {
+    font-size: .75rem;
+}
+
+.box .item .content dd {
+    font-size: .7rem;
+    color: #808080;
+    margin-top: .5rem;
+}
+
+.box h4 {
+    text-align: left;
+    text-indent: .5rem;
+    background: #FFF;
+    font-size: .8rem;
+    font-weight: normal;
+    margin: .5rem auto;
+    padding: .5rem 0;
+}
+
+.box h4 span {
+    display: inline-block;
+    float: right;
+    margin-right: .5rem;
+    color: #808080;
+    font-size: .8rem;
+    font-weight: normal;
+}
+
+
+.box .item-video {
+    width: 96%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: .5rem 0;
+}
+
+.box .item-video img {
+    width: 37%;
+    display: inline-block;
+    float: left;
+}
+
+.box .item-video .content {
+    float: right;
+    width: 60%;
+}
+
+.box .item-video .content dt {
+    font-size: .75rem;
+    position: relative;
+    margin-top: .5rem;
+}
+
+.box .item-video .content dt i {
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    background: url(../images/play.png) no-repeat center center;
+    background-size: contain;
+    position: relative;
+    top: .2rem;
+}
+
+.box .item-video .content dd {
+    font-size: .7rem;
+    color: #808080;
+    margin-top: 1.5rem;
+}
+
+.box .item .tips {
+    width: 35%;
+    float: left;
+    position: relative;
+}
+
+.box .item .tips img {
+    width: 100%;
+}
+
+.box .item .tips p {
+    font-size: .6rem;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background: #eeeeee;
+    bottom: -1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
