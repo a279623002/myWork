@@ -100,23 +100,23 @@
 
     <footer>
         <div class="col active">
-            <a href="/"><i class="home"></i>首页</a>
+            <a href="./index.html"><i class="home"></i>首页</a>
         </div>
         <div class="col">
-            <a href=""><i class="case"></i>学员案例</a>
+            <a href="./case.html"><i class="case"></i>学员案例</a>
         </div>
         <div class="col">
-            <a href=""><i class="action"></i>课程动态</a>
+            <a href="./course.html"><i class="action"></i>课程动态</a>
         </div>
         <div class="col">
-            <a href=""><i class="user"></i>我的</a>
+            <a href="./user.html"><i class="user"></i>我的</a>
         </div>
     </footer>
     <script src="./js/font.js"></script>
     <script src="./js/jquery-2.1.1.min.js"></script>
     <script>
-        $(function() {
-            $('nav a').on('click', function() {
+        $(function () {
+            $('nav a').on('click', function () {
                 var index = $(this).index();
                 $(this).addClass('active').siblings().removeClass('active');
                 $('main').find('.box').eq(index).show().siblings().hide();

@@ -1,0 +1,111 @@
+.top {
+    padding: .5rem;
+    overflow: hidden;
+    background: #FFF;
+}
+
+.top a {
+    display: inline-block;
+    float: left;
+    margin: .5rem .5rem 0 .5rem;
+    width: .8rem;
+    height: 1rem;
+    background: url(../images/back.png) no-repeat center center;
+    background-size: contain;
+}
+
+.top h2 {
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-indent: -2rem;
+    color: #333333;
+    font-weight: normal;
+}
+
+nav {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    background: #FFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    margin-top: .5rem;
+}
+
+nav a {
+    display: inline-block;
+    width: 4rem;
+    font-size: .85rem;
+    text-align: center;
+    margin-left: .8rem;
+    color: #808080;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+nav a.active {
+    border-bottom: 1px solid #5686e7;
+    color: #5686e7;
+    font-weight: bold;
+}
+
+.box {
+    width: 100%;
+    background: #FFF;
+    display: none;
+    margin-bottom: 10rem;
+}
+
+.box .item {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.box .item .content {
+    float: right;
+    width: 62%;
+}
+
+.box .item .content dt {
+    font-size: .75rem;
+}
+
+.box .item .content dd {
+    font-size: .6rem;
+    color: #808080;
+    margin-top: .8rem;
+}
+
+.box .item .content dd span {
+    display: inline-block;
+    float: right;
+    color: #808080;
+    font-size: .6rem;
+}
+
+.box .item .content dd span.ordered {
+    color: #ff8806;
+}
+
+.box .item .content dd span.order {
+    color: #0e72ec;
+}
+
+.box .item .tips {
+    width: 35%;
+    float: left;
+    position: relative;
+}
+
+.box .item .tips img {
+    width: 100%;
+}
+
+.box .item:last-child {
+    border: none;
+}
