@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/course.css">
+</head>
+
+<body>
+    <nav>
+        <a href="" class="active">全部专栏</a>
+        <a href="">免费专区</a>
+        <a href="">vip课程</a>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                    <p>52200人已学习</p>
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>已看3课</dd>
+                    <dd>最近观看时间 <span>2019.01.01 10:02:30</span></dd>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="copy-right">
+        All Right Reserved 版权所有
+    </div>
+
+    <footer>
+        <div class="col">
+            <a href="./index.html"><i class="home"></i>首页</a>
+        </div>
+        <div class="col">
+            <a href="./case.html"><i class="case"></i>学员案例</a>
+        </div>
+        <div class="col active">
+            <a href="./course.html"><i class="action"></i>课程动态</a>
+        </div>
+        <div class="col">
+            <a href="./user.html"><i class="user"></i>我的</a>
+        </div>
+    </footer>
+    <script src="./js/font.js"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('nav a').on('click', function () {
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('main').find('.box').eq(index).show().siblings().hide();
+                return false;
+            });
+            $('nav a').eq(0).click();
+        })
+    </script>
+</body>
+
+</html>

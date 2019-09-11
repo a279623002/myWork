@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/courseOrder.css">
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="javascript:history.go(-1);"></a>
+        <h2>课程订单</h2>
+    </div>
+    <nav>
+        <a href="" class="active">全部订单</a>
+        <a href="">已预约</a>
+        <a href="">未预约</a>
+        <a href="">已上课</a>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span class="order">未预约</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span class="ordered">已预约</span></dd>
+                </div>
+            </div>
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span>已上课</span></dd>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span class="ordered">已预约</span></dd>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span class="order">未预约</span></dd>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <div class="tips">
+                    <img src="./images/img4.png" alt="">
+                </div>
+                <div class="content">
+                    <dt>破冰入库：3个步骤和2套勾魂文案模板，不骚扰不推销，让顾客主...</dt>
+                    <dd>¥5.00 <span>已上课</span></dd>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/font.js"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('nav a').on('click', function () {
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('main').find('.box').eq(index).show().siblings().hide();
+                return false;
+            });
+            $('nav a').eq(0).click();
+        })
+    </script>
+</body>
+
+</html>

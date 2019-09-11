@@ -1,0 +1,81 @@
+.banner {
+    width: 100%;
+    background: #FFF;
+    padding-bottom: .5rem;
+}
+
+.banner img {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    background: #FFF;
+    margin-top: .5rem;
+    overflow: hidden;
+}
+
+nav a {
+    display: inline-block;
+    width: 5rem;
+    font-size: .95rem;
+    float: left;
+    text-align: center;
+    margin-left: .8rem;
+    color: #808080;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+nav a.active {
+    border-bottom: 1px solid #5686e7;
+    color: #5686e7;
+    font-weight: bold;
+}
+
+.box {
+    width: 100%;
+    background: #FFF;
+    display: none;
+}
+
+.box .item {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.box .item .content {
+    float: right;
+    width: 65%;
+}
+
+.box .item .content dt {
+    font-size: .75rem;
+}
+
+.box .item .content dd {
+    font-size: .7rem;
+    color: #808080;
+    margin-top: 1rem;
+}
+
+.box .item .content dd span {
+    display: inline-block;
+    float: right;
+    font-size: .7rem;
+    color: #808080;
+}
+
+.box .item .tips {
+    width: 30%;
+    float: left;
+    position: relative;
+}
+
+.box .item .tips img {
+    width: 100%;
+}
